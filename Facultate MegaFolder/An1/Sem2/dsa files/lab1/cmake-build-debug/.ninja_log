@@ -1,16 +1,6 @@
 # ninja log v5
 37	423	6701183401283609	CMakeFiles/lab1.dir/ShortTest.cpp.obj	477b99a5305274c5
 17	770	6701183404787493	CMakeFiles/lab1.dir/App.cpp.obj	1018e50b793248be
-1	860	6701183405673228	CMakeFiles/lab1.dir/ExtendedTest.cpp.obj	4f7c0b818fec17a6
-9	333	6701184181338939	CMakeFiles/lab1.dir/Matrix.cpp.obj	d9c538917bdf3884
-334	1061	6701184188531740	lab1.exe	35a18ada439ade8a
-9	778	6701185219058846	CMakeFiles/lab1.dir/ExtendedTest.cpp.obj	4f7c0b818fec17a6
-780	1570	6701185226581616	lab1.exe	35a18ada439ade8a
-7	334	6701187422528029	CMakeFiles/lab1.dir/Matrix.cpp.obj	d9c538917bdf3884
-335	667	6701187425797392	lab1.exe	35a18ada439ade8a
-7	619	6701187719196294	CMakeFiles/lab1.dir/ExtendedTest.cpp.obj	4f7c0b818fec17a6
-620	1161	6701187724506123	lab1.exe	35a18ada439ade8a
-4	211	6701190293796062	CMakeFiles/lab1.dir/Matrix.cpp.obj	d9c538917bdf3884
-213	510	6701190296677638	lab1.exe	35a18ada439ade8a
-7	295	6701192194925997	CMakeFiles/lab1.dir/Matrix.cpp.obj	d9c538917bdf3884
 297	846	6701192200315976	lab1.exe	35a18ada439ade8a
+7	619	6701187719196294	CMakeFiles/lab1.dir/ExtendedTest.cpp.obj	4f7c0b818fec17a6
+7	295	6701192194925997	CMakeFiles/lab1.dir/Matrix.cpp.obj	d9c538917bdf3884

@@ -1,15 +1,16 @@
 #pragma once
-
 //DO NOT CHANGE THIS PART
 typedef int TElem;
 #define NULL_TELEM 0
 
+
 class Matrix {
+    friend class MatrixIterator;
 
 private:
-    TElem* nonzeroElements;
-    int* columnIndices;
-    int* rowCounter;
+    TElem* nonzeroElements; // array of nonzero elements
+    int* columnIndices; // index of the column where each element is found
+    int* rowCounter; // holds the number of nonzero elements above current row
 	int nrRows;
     int nrCols;
     int capacity;
@@ -38,4 +39,5 @@ public:
 	//throws exception if (i,j) is not a valid position in the Matrix
 	TElem modify(int i, int j, TElem e);
 
+    MatrixIterator iterator() const;
 };

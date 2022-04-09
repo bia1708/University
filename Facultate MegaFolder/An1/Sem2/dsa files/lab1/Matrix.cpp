@@ -1,4 +1,5 @@
 #include "Matrix.h"
+#include "MatrixIterator.h"
 #include <exception>
 using namespace std;
 
@@ -14,7 +15,7 @@ Matrix::Matrix(int nrLines, int nrCols) {
     for(int i = 0; i <= this->nrRows; i++)
         this->rowCounter[i] = 0;
 }
-//// complexity: theta(1)
+/// theta(1)
 
 
 Matrix::~Matrix() {
@@ -27,13 +28,13 @@ Matrix::~Matrix() {
 int Matrix::nrLines() const {
 	return this->nrRows;
 }
-//// complexity: theta(1)
+/// theta(1)
 
 
 int Matrix::nrColumns() const {
 	return this->nrCols;
 }
-//// complexity: theta(1)
+/// theta(1)
 
 
 TElem Matrix::element(int i, int j) const {
@@ -157,4 +158,8 @@ void Matrix::resize(int newCapacity){
     this->columnIndices = newArrayOfColumnIndices;
     this->capacity = newCapacity;
 }
-/// complexity: theta(min(oldCapacity, newCapacity))
+/// theta(min(oldCapacity, newCapacity))
+
+MatrixIterator Matrix::iterator() const{
+    return MatrixIterator(*this);
+}

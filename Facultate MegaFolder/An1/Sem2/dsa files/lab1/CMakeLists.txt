@@ -12,4 +12,6 @@ add_executable(lab1
         Matrix.cpp
         Matrix.h
         ShortTest.cpp
-        ShortTest.h)
+        ShortTest.h
+        MatrixIterator.cpp
+        MatrixIterator.h)
