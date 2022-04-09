@@ -1,0 +1,202 @@
+1. Citire de la tastatura un număr
+Read format db “%d”, 0
+A resd 1
+
+Push dword a
+Push read format
+Call [scanf]
+Add ESP, 4*2
+
+✅
+
+2. Citire de la tastatura șir cu șpatii
+Len equ 100
+Șir times len db 0
+
+Push șir 
+Call [gets]
+Add ESP, 4
+CMP eax, 0
+Je final
+
+final:
+
+✅
+
+3. Afișare număr
+Print format db “%d”, 10, 0
+
+Push dword [a]
+Push print format
+Call [printf]
+Add ESP, 4*2
+
+✅
+
+4. Afișare șir 
+
+Print format db “%s”, 0
+
+Push dword șir
+Push print format
+Call [printf]
+Add ESP, 4*2
+
+✅
+
+5. Deschidere fisier
+File name db “1.txt”, 0
+File descriptor resd 1
+Mode “r”, 0
+
+Push mode
+Push File name
+Call [fopen]
+Add ESP, 4*2
+
+Mov dword [file descriptor], eax
+CMP eax, 0
+Je final
+
+final:
+
+✅
+
+6. Închidere fisier
+
+Push dword [file descriptor]
+Call [fclose]
+Add ESP, 4
+
+✅
+
+7. Citire din fisier string 
+
+Push dword [file descriptor]
+Push len
+Push 1
+Push text
+Call [fread]
+Add ESP, 4*4
+
+✅
+
+8. Citire din fisier nr unu câte unu 
+
+my_loop:
+
+Push dword current_number
+Push read_format 
+Push dword [file descriptor]
+Call [fscanf] 
+Add ESP, 4*3
+CMP eax, -1
+Je end_loop
+
+Jmp my_loop
+
+end_loop:
+
+✅
+
+9. Scriere in fisier
+
+Push dword [a]
+Push print format
+Push dword [file descriptor]
+Call [fprintf]
+Add ESP, 4*3
+
+✅
+
+10. Scriere in fisier șir
+
+Push text
+Push print format %s
+Push dword [file descriptor]
+Call [fprintf]
+Add ESP, 4*3
+
+bits 32 ; assembling for the 32 bits architecture
+
+; declare the EntryPoint (a label defining the very first instruction of the program)
+global start        
+
+; declare external functions needed by our program
+extern exit, fprintf, fopen, fclose, fread,                ; tell nasm that exit exists even if we won't be defining it
+import exit msvcrt.dll
+import fprintf msvcrt.dll
+import fopen msvcrt.dll
+import fclose msvcrt.dll
+import fread msvcrt.dll
+
+; our data is declared here (the variables needed by our program)
+segment data use32 class=data
+    ; ...
+    file_name_1 db "input.txt", 0 
+    file_name_2 db "output.txt", 0
+    acces_mode db "a+", 0
+    len equ 100
+    text times len db 0
+    file_descriptor_1 dd -1
+    file_descriptor_2 dd -1
+    
+
+; our code starts here
+segment code use32 class=code
+    start:
+        ; ...
+        ;deschidem fisierul input
+        push dword acces_mode
+        push dword file_name_1
+        call [fopen]
+        add esp, 4*2
+        
+        ;verificam deschiderea corecta a fisierului 
+        mov [file_descriptor_1], eax        
+        cmp eax, 0
+        je final
+        
+        
+        ;citim din fisier
+        ;fread(text, 1, len, file_descriptor_1)
+        push dword [file_descriptor_1]
+        push dword len
+        push dword 1
+        push dword text
+        call [fread]
+        add esp, 4*4
+        
+        ;deschidem fisierul de output
+        push dword acces_mode
+        push dword file_name_2
+        call [fopen]
+        add esp, 4*2
+        
+        
+        ;verificam deschiderea
+        mov [file_descriptor_2], eax        
+        cmp eax, 0
+        je final
+        
+        ;citim din fisier
+        ; printif (file_descriptor_2, text)
+        push dword text
+        push dword [file_descriptor_2]
+        call [fprintf]
+        add esp, 4*2
+        
+        ;inchidem fisierele
+        push dword [file_descriptor_1]
+        call [fclose]
+        add esp, 4*1
+        
+        push dword [file_descriptor_2]
+        call [fclose]
+        add esp, 4*1
+        
+        
+        final:
+        ; exit(0)
+        push    dword 0      ; push the parameter for exit onto the stack
+        call    [exit]       ; call exit to terminate the program

@@ -1,0 +1,21 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  
+     7                                  extern exit               
+     8                                  import exit msvcrt.dll    
+     9                                  
+    10                                  segment data use32 class=data
+    11 00000000 31323300<rept>              a times 2 dw '123'
+    12                                      
+    13                                   
+    14                                  
+    15                                  segment code use32 class=code
+    16                                      start:
+    17                                          ; ...
+    18                                      
+    19                                          ; exit(0)
+    20 00000000 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    21 00000002 FF15[00000000]                  call    [exit]       ; call exit to terminate the program

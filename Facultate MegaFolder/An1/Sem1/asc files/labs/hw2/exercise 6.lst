@@ -1,0 +1,45 @@
+     1                                  bits 32 
+     2                                  ; problem 6
+     3                                  
+     4                                  global start        
+     5                                  
+     6                                  
+     7                                  extern exit               
+     8                                  import exit msvcrt.dll    
+     9                                                            
+    10                                  
+    11                                  
+    12                                  segment data use32 class=data
+    13                                      ;a, b, c - byte; d - word
+    14                                      
+    15 00000000 05                          a db 5 
+    16 00000001 07                          b db 7
+    17 00000002 0A                          c db 10
+    18 00000003 8200                        d dw 130
+    19                                  
+    20                                  segment code use32 class=code
+    21                                      start:
+    22                                          ; [2*(a+b)-5*c]*(d-3)
+    23                                          
+    24 00000000 A0[00000000]                    mov AL, [a]
+    25 00000005 0205[01000000]                  add AL, [b] ; AL: a + b = 5 + 7 = 12
+    26                                          
+    27 0000000B B302                            mov BL, 2
+    28 0000000D F6E3                            mul BL ; AX: 2 * (a + b) = 2 * 12 = 24
+    29                                          
+    30 0000000F 6689C1                          mov CX, AX ; CX : 24
+    31                                          
+    32 00000012 A0[02000000]                    mov AL, [c]
+    33 00000017 B305                            mov BL, 5
+    34 00000019 F6E3                            mul BL ; AX : 5 * c = 5 * 10 = 50
+    35                                          
+    36 0000001B 6629C1                          sub CX, AX ; CX : 24 - 50 = -26
+    37                                          
+    38 0000001E 66A1[03000000]                  mov AX, [d]
+    39 00000024 6683E803                        sub AX, 3 ; AX = 130 - 3 = 127
+    40 00000028 66F7E1                          mul CX ; AX : 127 * (-26) = -3302
+    41                                          
+    42                                      
+    43                                          ; exit(0)
+    44 0000002B 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    45 0000002D FF15[00000000]                  call    [exit]       ; call exit to terminate the program

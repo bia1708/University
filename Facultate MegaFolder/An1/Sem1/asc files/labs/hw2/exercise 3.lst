@@ -1,0 +1,35 @@
+     1                                  bits 32 
+     2                                  ; problem 20
+     3                                  
+     4                                  global start        
+     5                                  
+     6                                  
+     7                                  extern exit               
+     8                                  import exit msvcrt.dll    
+     9                                                            
+    10                                  
+    11                                  
+    12                                  segment data use32 class=data
+    13                                      ; a, b, c, d - byte
+    14 00000000 03                          a db 3
+    15 00000001 01                          b db 1
+    16 00000002 0A                          c db 10
+    17 00000003 04                          d db 4
+    18                                  
+    19                                  
+    20                                  segment code use32 class=code
+    21                                      start:
+    22                                          ; (a+a)-(c+b+d)
+    23                                          
+    24 00000000 8A25[00000000]                  mov AH, [a]
+    25 00000006 00E4                            add AH, AH ; AH now has the value of a + a = 3 + 3 = 6
+    26                                          
+    27 00000008 8A3D[01000000]                  mov BH, [b]
+    28 0000000E 023D[02000000]                  add BH, [c]
+    29 00000014 023D[03000000]                  add BH, [d] ; now BH has the value of c + b + d = 1 + 10 + 4 = 15
+    30                                          
+    31 0000001A 28FC                            sub AH, BH ; AH now has the final value: 6 - 15 = -9
+    32                                      
+    33                                          ; exit(0)
+    34 0000001C 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    35 0000001E FF15[00000000]                  call    [exit]       ; call exit to terminate the program

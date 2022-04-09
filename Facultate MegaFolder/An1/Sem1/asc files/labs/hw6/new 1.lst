@@ -1,0 +1,37 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  global start        
+     4                                  
+     5                                  extern exit, printf               
+     6                                  import exit msvcrt.dll    
+     7                                  import printf msvcrt.dll 
+     8                                  
+     9                                  segment data use32 class=data
+    10 00000000 2564202F202564203D-         format db "%d / %d = %d", 0
+    10 00000009 20256400           
+    11 0000000D C8000000                    a dd 200
+    12 00000011 05000000                    b dd 5
+    13                                  
+    14                                  segment code use32 class=code
+    15                                      start:
+    16                                          ; Two natural numbers a and b (a: dword, b: dword, defined in the data segment) are given. Calculate a/b and display the quotient in the       following format: "<a>/<b> = <quotient>". Example: for a = 200, 
+    17                                          ;The values will be displayed in decimal format (base 10) with sign.
+    18                                          
+    19 00000000 A1[0D000000]                    mov eax, [a]
+    20 00000005 BA00000000                      mov edx, 0
+    21 0000000A 8B1D[11000000]                  mov ebx, [b] 
+    22 00000010 F7FB                            idiv ebx ; now the quotient is in eax
+    23                                         
+    24 00000012 89C1                            mov ecx, eax ; we save the quotient in ecx 
+    25 00000014 A1[0D000000]                    mov eax, [a]
+    26                                          
+    27 00000019 51                              push dword ecx
+    28 0000001A 53                              push dword ebx
+    29 0000001B 50                              push dword eax
+    30 0000001C 68[00000000]                    push dword format
+    31 00000021 FF15[00000000]                  call [printf]
+    32 00000027 83C410                          add esp, 4 * 4
+    33                                      
+    34                                          ; exit(0)
+    35 0000002A 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    36 0000002C FF15[00000000]                  call    [exit]       ; call exit to terminate the program

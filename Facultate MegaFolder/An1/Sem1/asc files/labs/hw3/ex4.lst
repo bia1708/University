@@ -1,0 +1,52 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  global start        
+     4                                  
+     5                                  extern exit               
+     6                                  import exit msvcrt.dll    
+     7                                  
+     8                                  ; our data is declared here (the variables needed by our program)
+     9                                  segment data use32 class=data
+    10                                      ; a - byte, b - word, c - double word, d - qword - Signed representation
+    11 00000000 04                          a db 4
+    12 00000001 2C01                        b dw 300
+    13 00000003 32000000                    c dd 50
+    14 00000007 4600000000000000            d dq 70
+    15                                  
+    16                                  ; our code starts here
+    17                                  segment code use32 class=code
+    18                                      start:
+    19                                          ; a-b-(c-d)+d
+    20 00000000 A1[03000000]                    mov EAX, [c]
+    21 00000005 99                              cdq
+    22 00000006 F8                              clc
+    23 00000007 2B05[07000000]                  sub EAX, [d + 0]
+    24 0000000D 1B15[0B000000]                  sbb EDX, [d + 4] ; now EDX:EAX stores c - d
+    25                                          
+    26 00000013 89C3                            mov EBX, EAX
+    27 00000015 89D1                            mov ECX, EDX
+    28                                          
+    29 00000017 A0[00000000]                    mov AL, [a]
+    30 0000001C 6698                            cbw
+    31 0000001E 98                              cwde
+    32 0000001F 99                              cdq
+    33 00000020 F8                              clc
+    34 00000021 29D8                            sub EAX, EBX
+    35 00000023 19CA                            sbb EDX, ECX ; EDX:EAX now stores a - (c - d) = 4 + 20
+    36                                          
+    37 00000025 0305[07000000]                  add EAX, [d + 0]
+    38 0000002B 0315[0B000000]                  add EDX, [d + 4] ; EDX:EAX now stores a - (c - d) + d = 94
+    39                                          
+    40 00000031 668B1D[01000000]                mov BX, [b]
+    41 00000038 66B90000                        mov CX, 0 ;CX:BX stores b
+    42 0000003C 6651                            push CX
+    43 0000003E 6653                            push BX
+    44 00000040 5B                              pop EBX
+    45 00000041 B900000000                      mov ECX, 0
+    46 00000046 F8                              clc
+    47 00000047 29D8                            sub EAX, EBX
+    48 00000049 19CA                            sbb EDX, ECX ; EDX:EAX stores the final result 94 - 300
+    49                                          
+    50                                          ; exit(0)
+    51 0000004B 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    52 0000004D FF15[00000000]                  call    [exit]       ; call exit to terminate the program

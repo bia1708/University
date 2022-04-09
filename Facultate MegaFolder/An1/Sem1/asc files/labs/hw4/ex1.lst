@@ -1,0 +1,52 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  global start        
+     4                                  
+     5                                  extern exit               
+     6                                  import exit msvcrt.dll    
+     7                                  
+     8                                  ; our data is declared here (the variables needed by our program)
+     9                                  segment data use32 class=data
+    10 00000000 9100                        a dw 145 ; a is 1001 0001
+    11 00000002 0000                        b dw 0
+    12 00000004 00000000                    c dd 0
+    13 00000008 FE                          d db 0FEh
+    14                                  
+    15                                  ; our code starts here
+    16                                  segment code use32 class=code
+    17                                      start:
+    18                                          ; Given the word A, obtain the integer number n represented on the bits 0-2 of A. Then obtain the word B by rotating A n positions to the right. Compute the doubleword C:
+    19                                          ;the bits 8-15 of C have the value 0
+    20                                          ;the bits 16-23 of C are the same as the bits of 2-9 of B
+    21                                          ;the bits 24-31 of C are the same as the bits of 7-14 of A
+    22                                          ;the bits 0-7 of C have the value 1
+    23 00000000 66BB0000                        mov BX, 0 ; this is where b will be constructed
+    24                                          
+    25 00000004 66A1[00000000]                  mov AX, [a]
+    26 0000000A 6683E007                        and AX, 0000_0000_0000_0111b ; The bits 0-2 are right at the beginning so I don't need to shift the number
+    27                                          
+    28 0000000E B100                            mov CL, 0 ; CL will hold the number n
+    29 00000010 6601C3                          add BX, AX ; BX now holds the bits 0-2 of A
+    30 00000013 88D9                            mov CL, BL
+    31                                          
+    32 00000015 668B1D[00000000]                mov BX, [a]
+    33 0000001C 66D3CB                          ror BX, CL
+    34 0000001F 66891D[02000000]                mov [b], BX ; B is now 0000 0000 0100 1000
+    35                                          
+    36 00000026 668B15[02000000]                mov DX, [b] ; DX will hold bits 16-31 of C
+    37 0000002D 6681E2FC03                      and DX, 0000_0011_1111_1100b ; now DX has bits 2-9 of B
+    38 00000032 66C1EA02                        shr DX, 2 ; now bits 16-23 of C are the same as bits 2-9 of B
+    39                                          
+    40 00000036 668B1D[00000000]                mov BX, [a] ;
+    41 0000003D 6681E3807F                      and BX, 0111_1111_1000_0000b ; BX has bits 7-14 of A
+    42 00000042 66D1E3                          shl BX, 1
+    43 00000045 6601DA                          add DX, BX 
+    44 00000048 668915[08000000]                mov [c + 4], DX
+    45                                          
+    46 0000004F 66A1[04000000]                  mov AX, [c + 0]
+    47 00000055 660DFF00                        or AX, 0000_0000_1111_1111b ; bits 8-15 of C were already 0 and now bits 0-7 of C will be 1
+    48 00000059 66A3[04000000]                  mov [c + 0], AX
+    49                                          
+    50                                          ; exit(0)
+    51 0000005F 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    52 00000061 FF15[00000000]                  call    [exit]       ; call exit to terminate the program

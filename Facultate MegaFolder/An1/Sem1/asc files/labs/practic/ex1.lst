@@ -1,0 +1,64 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  global start        
+     4                                  
+     5                                  extern exit, fopen, scanf, fprintf, fclose               
+     6                                  import exit msvcrt.dll
+     7                                  import fopen msvcrt.dll
+     8                                  import scanf msvcrt.dll
+     9                                  import fprintf msvcrt.dll
+    10                                  import fclose msvcrt.dll
+    11                                  
+    12                                  segment data use32 class=data
+    13 00000000 6E756D62657273332E-         file_name db "numbers3.txt", 0
+    13 00000009 74787400           
+    14 0000000D 6100                        access_mode db "a", 0
+    15 0000000F FFFFFFFF                    file_descriptor dd -1
+    16                                      
+    17 00000013 00000000                    number dd 0
+    18 00000017 256400                      input_format db "%d", 0
+    19 0000001A 00000000                    sum dd 0
+    20 0000001E 2564202D2025645C6E-         output_format db "%d - %d\n", 0
+    20 00000027 00                 
+    21                                  
+    22                                  segment code use32 class=code
+    23                                      start:
+    24 00000000 68[0D000000]                    push dword access_mode     
+    25 00000005 68[00000000]                    push dword file_name
+    26 0000000A FF15[00000000]                  call [fopen]
+    27 00000010 83C408                          add esp, 4*2
+    28                                          
+    29 00000013 A3[0F000000]                    mov [file_descriptor], eax
+    30                                          
+    31                                          ;cmp eax, 0
+    32                                          ;je ending
+    33                                          
+    34                                          reading_loop:
+    35 00000018 68[13000000]                        push dword number
+    36 0000001D 68[17000000]                        push dword input_format
+    37 00000022 FF15[00000000]                      call [scanf]
+    38 00000028 83C408                              add esp, 4 * 2
+    39                                              
+    40 0000002B A1[13000000]                        mov eax, [number]
+    41 00000030 83F800                              cmp eax, 0
+    42 00000033 7428                                je ending
+    43                                              
+    44 00000035 0105[1A000000]                      add [sum], eax
+    45                                              
+    46 0000003B FF35[1A000000]                      push dword [sum]
+    47 00000041 FF35[13000000]                      push dword [number]
+    48 00000047 68[1E000000]                        push dword output_format
+    49 0000004C FF35[0F000000]                      push dword [file_descriptor]
+    50 00000052 FF15[00000000]                      call [fprintf]
+    51 00000058 83C410                              add esp, 4 * 4
+    52                                              
+    53 0000005B EBBB                                jmp reading_loop
+    54                                          
+    55                                      
+    56                                          ending:
+    57 0000005D FF35[0F000000]                  push dword [file_descriptor]
+    58 00000063 FF15[00000000]                  call [fclose]
+    59 00000069 83C404                          add esp, 4
+    60                                          
+    61 0000006C 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    62 0000006E FF15[00000000]                  call    [exit]       ; call exit to terminate the program

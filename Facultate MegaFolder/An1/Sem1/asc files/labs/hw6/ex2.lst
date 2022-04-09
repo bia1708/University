@@ -1,0 +1,50 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  global start        
+     4                                  
+     5                                  extern exit               
+     6                                  import exit msvcrt.dll    
+     7                                  
+     8                                  segment data use32 class=data
+     9                                      ; sir DW 12345, 20778, 4596 
+    10 00000000 39302A51F411                s dw 12345, 20778, 4596 
+    11                                      l equ ($-s) / 2
+    12 00000006 00                          nl db 0
+    13 00000007 00<rept>                    d times l * 2 db 0 
+    14                                  
+    15                                  ; our code starts here
+    16                                  segment code use32 class=code
+    17                                      start:
+    18                                          ; Being given a string of words, obtain the string (of bytes) of the digits in base 10 of each word from this string.
+    19                                          
+    20 00000000 BE[00000000]                    mov esi, s
+    21 00000005 BF00000000                      mov edi, 0
+    22 0000000A FC                              cld
+    23 0000000B B903000000                      mov ecx, l
+    24                                          loop_words:
+    25 00000010 66AD                                lodsw ; ax stores each word
+    26 00000012 C605[06000000]00                    mov [nl], byte 0 ; this variable will keep the length of each number(the number of digits)
+    27                                              digit_parsing:
+    28 00000019 66BA0000                                mov dx, 0 ; I want to divide DX:AX so that my digits will be ready to be pushed on the stack
+    29 0000001D 66BB0A00                                mov bx, 10
+    30 00000021 66F7F3                                  div bx ; dx has the digit, ax has the quotient(the remaining number)
+    31 00000024 6652                                    push dx ; we push all the digits on the stack to pop them in the right order
+    32 00000026 8005[06000000]01                        add [nl], byte 1
+    33 0000002D 6683F800                                cmp ax, 0 ; we check to see if we have any digits left
+    34 00000031 7402                                    jz next_step 	
+    35 00000033 EBE4                                jmp digit_parsing
+    36                                              next_step:
+    37                                              
+    38                                              digit_arrangement:
+    39 00000035 665A                                    pop dx ; this would be the first digit of the number, of type word
+    40 00000037 8897[07000000]                          mov [d + edi], dl ; I'm only interested in dl because that's where my digit will be, so I move that in the destination string
+    41 0000003D 47                                      inc edi
+    42 0000003E 802D[06000000]01                        sub [nl], byte 1
+    43 00000045 803D[06000000]00                        cmp [nl], byte 0
+    44 0000004C 7402                                    jz ending
+    45 0000004E EBE5                                jmp digit_arrangement
+    46                                              ending:
+    47 00000050 E2BE                            loop loop_words
+    48                                          ; exit(0)
+    49 00000052 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    50 00000054 FF15[00000000]                  call    [exit]       ; call exit to terminate the program

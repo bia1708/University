@@ -1,0 +1,39 @@
+     1                                  bits 32 
+     2                                  ; problem 6 
+     3                                  
+     4                                  global start        
+     5                                  
+     6                                  
+     7                                  extern exit               
+     8                                  import exit msvcrt.dll    
+     9                                                            
+    10                                  
+    11                                  
+    12                                  segment data use32 class=data
+    13                                      ; a, b, c, d - word
+    14 00000000 0800                        a dw 8
+    15 00000002 1400                        b dw 20
+    16 00000004 0D00                        c dw 13
+    17 00000006 0F00                        d dw 15
+    18                                  
+    19                                  
+    20                                  segment code use32 class=code
+    21                                      start:
+    22                                          ; c-(d+a)+(b+c)
+    23                                          
+    24 00000000 66A1[04000000]                  mov AX, [c] ; AX now has the value of c = 13
+    25                                          
+    26 00000006 668B1D[06000000]                mov BX, [d]
+    27 0000000D 66031D[00000000]                add BX, [a] ; BX now has the value of d + a = 15 + 8 = 23
+    28                                          
+    29 00000014 668B0D[02000000]                mov CX, [b]
+    30 0000001B 66030D[04000000]                add CX, [c] ; CX now has the value of b + c = 20 + 13 = 33
+    31                                          
+    32 00000022 6629D8                          sub AX, BX ; AX now has the value 13 - 23 = -10
+    33 00000025 6601C8                          add AX, CX ; AX now has the final value: -10 + 33 = 23
+    34                                          
+    35                                          ;div BL
+    36                                      
+    37                                          ; exit(0)
+    38 00000028 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    39 0000002A FF15[00000000]                  call    [exit]       ; call exit to terminate the program

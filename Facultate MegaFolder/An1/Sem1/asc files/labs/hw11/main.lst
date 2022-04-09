@@ -1,0 +1,36 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  global start, s1, s2, s3        
+     4                                  
+     5                                  extern exit, read_string, printf             
+     6                                  import exit msvcrt.dll   
+     7                                  import printf msvcrt.dll    
+     8                                  
+     9                                  segment data use32 class=data
+    10 00000000 00000000                    s1 dd 0
+    11 00000004 00000000                    s2 dd 0
+    12 00000008 00000000                    s3 dd 0
+    13 0000000C 00000000<rept>              final_string times 3 dd 0
+    14 00000018 257300                      format db "%s", 0
+    15                                  
+    16                                  ; our code starts here
+    17                                  segment code use32 class=code
+    18                                      start:
+    19                                          ; Three strings (of characters) are read from the keyboard. Identify and display the result of their concatenation.
+    20 00000000 E8(00000000)                    call read_string
+    21                                          
+    22 00000005 A1[00000000]                    mov eax, [s1]
+    23 0000000A A3[0C000000]                    mov [final_string + 0], eax
+    24 0000000F A1[04000000]                    mov eax, [s2]
+    25 00000014 A3[10000000]                    mov [final_string + 4], eax
+    26 00000019 A1[08000000]                    mov eax, [s3]
+    27 0000001E A3[14000000]                    mov [final_string + 8], eax
+    28                                          
+    29 00000023 68[0C000000]                    push dword final_string
+    30 00000028 68[18000000]                    push dword format
+    31 0000002D FF15[00000000]                  call [printf]
+    32 00000033 83C410                          add esp, 4 * 4
+    33                                      
+    34                                          ; exit(0)
+    35 00000036 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    36 00000038 FF15[00000000]                  call    [exit]       ; call exit to terminate the program

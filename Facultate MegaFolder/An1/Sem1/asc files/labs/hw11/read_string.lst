@@ -1,0 +1,24 @@
+     1                                  bits 32
+     2                                  
+     3                                  extern scanf
+     4                                  global read_string
+     5                                  import scanf msvcrt.dll
+     6                                  
+     7                                  segment data use32 class=data
+     8 00000000 00                          s db 0
+     9 00000001 257300                      format db "%s", 0
+    10                                  
+    11                                  
+    12                                  segment code use32 class=code
+    13                                  read_string:
+    14 00000000 68[00000000]                push dword s
+    15 00000005 68[01000000]                push dword format
+    16 0000000A FF15[00000000]              call [scanf]
+    17 00000010 83C408                      add esp, 4 * 2
+    18 00000013 A1[00000000]                mov eax, dword [s]
+    19 00000018 8F05[00000000]              pop dword [s]
+    20 0000001E 8F05[01000000]              pop dword [format]
+    21                                      
+    22 00000024 C3                          ret
+    23                                      
+    24                                      

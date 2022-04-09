@@ -1,0 +1,62 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  global start        
+     4                                  
+     5                                  extern exit               
+     6                                  import exit msvcrt.dll   
+     7                                  
+     8                                  ; our data is declared here (the variables needed by our program)
+     9                                  segment data use32 class=data
+    10                                      ; a,b,d-byte; c-word; e-doubleword; x-qword - SIGNED
+    11 00000000 02                          a db 2
+    12 00000001 04                          b db 4
+    13 00000002 05                          d db 5
+    14 00000003 0A00                        c dw 10
+    15 00000005 64000000                    e dd 100
+    16 00000009 C800000000000000            x dq 200
+    17                                  
+    18                                  ; our code starts here
+    19                                  segment code use32 class=code
+    20                                      start:
+    21                                          ; x+a/b+c*d-b/c+e; 
+    22 00000000 A0[00000000]                    mov AL, [a]
+    23 00000005 6698                            cbw
+    24 00000007 F63D[01000000]                  idiv byte [b]
+    25                                           
+    26 0000000D 88C3                            mov BL, AL ; now BL stores a / b = 2 / 4 = 0
+    27 0000000F B700                            mov BH, 0 ; now BX stores a / b
+    28 00000011 66B90000                        mov CX, 0 ; CX:BX stores a / b
+    29                                          
+    30 00000015 A0[02000000]                    mov AL, [d]
+    31 0000001A 6698                            cbw
+    32 0000001C 668B15[03000000]                mov DX, [c]
+    33 00000023 66F7EA                          imul DX ; DX:AX now stores c * d = 5 * 10 = 50
+    34                                          
+    35 00000026 F8                              clc
+    36 00000027 6601C3                          add BX, AX
+    37 0000002A 6611D1                          adc CX, DX ; CX:BX stores a / b + c * d
+    38                                          
+    39 0000002D A0[01000000]                    mov AL, [b]
+    40 00000032 6698                            cbw
+    41 00000034 98                              cwde
+    42 00000035 BA00000000                      mov EDX, 0
+    43 0000003A 66F73D[03000000]                idiv word [c] ; AX stores b / c = 0
+    44 00000041 66BA0000                        mov DX, 0 ; DX:AX stores b / c
+    45                                          
+    46 00000045 F8                              clc
+    47 00000046 6629C3                          sub BX, AX
+    48 00000049 6619D1                          sbb CX, DX
+    49                                          
+    50 0000004C 66031D[05000000]                add BX, [e + 0]
+    51 00000053 66030D[07000000]                add CX, [e + 2]
+    52 0000005A 6651                            push CX
+    53 0000005C 6653                            push BX
+    54 0000005E 5B                              pop EBX
+    55 0000005F B900000000                      mov ECX, 0
+    56                                          
+    57 00000064 031D[09000000]                  add EBX, [x + 0]
+    58 0000006A 030D[0D000000]                  add ECX, [x + 4]
+    59                                      
+    60                                          ; exit(0)
+    61 00000070 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    62 00000072 FF15[00000000]                  call    [exit]       ; call exit to terminate the program

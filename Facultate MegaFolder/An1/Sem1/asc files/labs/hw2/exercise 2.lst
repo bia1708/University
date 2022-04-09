@@ -1,0 +1,39 @@
+     1                                  bits 32 
+     2                                  ; problem 6
+     3                                  
+     4                                  global start        
+     5                                  
+     6                                  
+     7                                  extern exit               
+     8                                  import exit msvcrt.dll    
+     9                                                            
+    10                                  
+    11                                  
+    12                                  segment data use32 class=data
+    13                                      ; a, b, c, d - byte
+    14 00000000 05                          a db 5
+    15 00000001 04                          b db 4
+    16 00000002 02                          c db 2
+    17 00000003 07                          d db 7
+    18                                  
+    19                                  
+    20                                  segment code use32 class=code
+    21                                      start:
+    22                                          ; (a+b)-(a+d)+(c-a)
+    23                                          
+    24 00000000 8A25[00000000]                  mov AH, [a]
+    25 00000006 8A3D[01000000]                  mov BH, [b]
+    26 0000000C 00FC                            add AH, BH ; AH now has a + b = 5 + 4 = 9
+    27                                          
+    28 0000000E 8A3D[00000000]                  mov BH, [a]
+    29 00000014 023D[03000000]                  add BH, [d] ; BH now has a + d = 5 + 7 = 12
+    30                                          
+    31 0000001A 8A0D[02000000]                  mov CL, [c]
+    32 00000020 2A0D[00000000]                  sub CL, [a] ; CL now has c - a = 2 - 5 = -3
+    33                                          
+    34 00000026 28FC                            sub AH, BH ; AH now has (a+b)-(a+d) = 9 - 12 = -3
+    35 00000028 00CC                            add AH, CL ; AH now has the final result, -3 + (-3) = -6
+    36                                              
+    37                                          ; exit(0)
+    38 0000002A 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    39 0000002C FF15[00000000]                  call    [exit]       ; call exit to terminate the program

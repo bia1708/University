@@ -1,0 +1,58 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  global start        
+     4                                  
+     5                                  extern exit               
+     6                                  import exit msvcrt.dll    
+     7                                  
+     8                                  ; our data is declared here (the variables needed by our program)
+     9                                  segment data use32 class=data
+    10                                      ; a - byte, b - word, c - double word, d - qword - Unsigned representation
+    11 00000000 04                          a db 4
+    12 00000001 2C01                        b dw 300
+    13 00000003 46000000                    c dd 70
+    14 00000007 1111111111111111            d dq 1111111111111111h
+    15                                  ; our code starts here
+    16                                  segment code use32 class=code
+    17                                      start:
+    18                                          ; (a+c)-b+a+(d-c)
+    19 00000000 8B1D[07000000]                  mov EBX, [d + 0]
+    20 00000006 8B0D[0B000000]                  mov ECX, [d + 4]
+    21                                          
+    22 0000000C A1[03000000]                    mov EAX, [c]
+    23 00000011 BA00000000                      mov EDX, 0
+    24                                          
+    25 00000016 F8                              clc
+    26 00000017 29C3                            sub EBX, EAX
+    27 00000019 19D1                            sbb ECX, EDX ; result is in ECX:EBX = d - c = 1111 1111 1111 10CB
+    28                                          
+    29 0000001B 660FB605[00000000]              movzx AX, [a]
+    30 00000023 66BA0000                        mov DX, 0
+    31 00000027 F8                              clc
+    32 00000028 660305[03000000]                add AX, [c + 0]
+    33 0000002F 661315[05000000]                adc DX, [c + 2] ; result of a + c is in DX:AX = 74
+    34                                          
+    35 00000036 6652                            push DX
+    36 00000038 6650                            push AX
+    37 0000003A 58                              pop EAX
+    38 0000003B BA00000000                      mov EDX, 0
+    39                                          
+    40 00000040 F8                              clc
+    41 00000041 01C3                            add EBX, EAX
+    42 00000043 11D1                            adc ECX, EDX ; result of (a + c) + (d - c) is in ECX:EBX = 1111 1111 1111 1115
+    43                                          
+    44 00000045 660FB605[00000000]              movzx AX, [a]
+    45 0000004D 662B05[01000000]                sub AX, [b]
+    46 00000054 66BA0000                        mov DX, 0 ; DX:AX stores the result of b - a = -296
+    47 00000058 6652                            push DX
+    48 0000005A 6650                            push AX
+    49 0000005C 58                              pop EAX
+    50 0000005D BA00000000                      mov EDX, 0
+    51                                          
+    52 00000062 F8                              clc
+    53 00000063 01C3                            add EBX, EAX
+    54 00000065 11D1                            adc ECX, EDX ; ECX:EBX now stores the final result = 1111 1111 1111 0FED
+    55                                          
+    56                                          ; exit(0)
+    57 00000067 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    58 00000069 FF15[00000000]                  call    [exit]       ; call exit to terminate the program

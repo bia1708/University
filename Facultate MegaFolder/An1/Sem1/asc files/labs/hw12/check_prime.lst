@@ -1,0 +1,46 @@
+     1                                  bits 32 
+     2                                  
+     3                                  global _check_prime        
+     4                                  
+     5                                  
+     6                                  segment data use32 class=data
+     7 00000000 0000                        counter dw 0
+     8 00000002 0100                        is_prime dw 1
+     9                                  
+    10                                  segment code use32 class=code
+    11                                      _check_prime:
+    12 00000000 55                              push ebp
+    13 00000001 89E5                            mov ebp, esp 
+    14 00000003 83EC0C                          sub esp, 4*3
+    15                                          
+    16 00000006 8B4D08                          mov ecx, [ebp + 8] ; this will be the number passed as a parameter = the number we want to check if it's a prime
+    17 00000009 890D[00000000]                  mov [counter], ecx ; this will be our divisor
+    18                                          
+    19                                          start_algorithm:
+    20 0000000F FF0D[00000000]                      dec dword [counter] ; we start checking the divisor n - 1
+    21 00000015 833D[00000000]02                    cmp dword [counter], 2 ; we have to stop the algorithm when the divisor reaches 1
+    22 0000001C 7D02                                jge check_divisibility ; if we have an eligible divisor, we jump to check if n divides counter
+    23 0000001E EB1C                                jmp end_of_algorithm 
+    24                                              
+    25                                              check_divisibility:
+    26 00000020 89C8                                    mov eax, ecx ; we put our number in eax for the division
+    27 00000022 99                                      cdq ; to make the division, we need EDX:EAX register
+    28 00000023 8B1D[00000000]                          mov ebx, [counter] ; we put in ebx the divisor
+    29 00000029 F7FB                                    idiv ebx
+    30 0000002B 83FA00                                  cmp edx, 0 ; the remainder will be stored in edx: if it is 0, then our number is divisible by counter => it's not prime
+    31 0000002E 7402                                    je not_prime
+    32 00000030 EBDD                                    jmp start_algorithm ; if it's not divisible we check the next divisor
+    33                                                  
+    34                                              not_prime:
+    35 00000032 C705[02000000]0000-                     mov [is_prime], dword 0 ; we set our return value to 0
+    35 0000003A 0000               
+    36                                                  
+    37                                                  
+    38                                              
+    39                                          end_of_algorithm:
+    40                                          
+    41 0000003C A1[02000000]                    mov eax, [is_prime] 
+    42 00000041 89EC                            mov esp, ebp
+    43 00000043 5D                              pop ebp 
+    44                                             
+    45 00000044 C3                              ret

@@ -1,0 +1,63 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  extern exit               
+     7                                  import exit msvcrt.dll    
+     8                                  
+     9                                  ; our data is declared here (the variables needed by our program)
+    10                                  segment data use32 class=data
+    11                                      ; a - byte, b - word, c - double word, d - qword - Unsigned representation
+    12 00000000 04                          a db 4
+    13 00000001 2C01                        b dw 300
+    14 00000003 46000000                    c dd 70
+    15 00000007 1111111111111111            d dq 1111111111111111h
+    16                                  
+    17                                  ; our code starts here
+    18                                  segment code use32 class=code
+    19                                      start:
+    20                                          ; (a+b)-(a+d)+(c-a)
+    21                                          
+    22 00000000 66A1[03000000]                  mov AX, word [c + 0]
+    23 00000006 668B15[05000000]                mov DX, word [c + 2] ; DX:AX stores the doubleword c
+    24 0000000D 660FB61D[00000000]              movzx BX, [a] ;
+    25 00000015 66B90000                        mov CX, 0 ; CX:BX stores a
+    26 00000019 F8                              clc
+    27 0000001A 6629D8                          sub AX, BX
+    28 0000001D 6619CA                          sbb DX, CX ; result of c - a is in DX:AX
+    29                                          
+    30 00000020 8A1D[00000000]                  mov BL, [a]
+    31 00000026 B700                            mov BH, 0 ; unsigned conversion from BL to BX
+    32 00000028 66031D[01000000]                add BX, [b] ; BX: a + b = 4 + 300 = 304
+    33 0000002F 66B90000                        mov CX, 0 ; CX:BX stores a + b
+    34                                          
+    35 00000033 F8                              clc
+    36 00000034 6601D8                          add AX, BX
+    37 00000037 6611CA                          adc DX, CX ; in DX:AX we have (a + b) + (c - a)
+    38                                          
+    39 0000003A 6652                            push DX
+    40 0000003C 6650                            push AX
+    41 0000003E 58                              pop EAX ; EAX now stores (a + b) + (c - a)
+    42 0000003F BA00000000                      mov EDX, 0 ; EDX:EAX now stores (a + b) + (c - a)
+    43                                          
+    44 00000044 660FB61D[00000000]              movzx BX, [a] ; BX stores a    
+    45                                          ;mov BH, 0
+    46                                          ;mov BL, [a]
+    47 0000004C 66B90000                        mov CX, 0
+    48 00000050 6651                            push CX
+    49 00000052 6653                            push BX
+    50 00000054 5B                              pop EBX
+    51 00000055 B900000000                      mov ECX, 0 ; ECX:EBX stores a
+    52                                          
+    53                                          ; result will be in EDX:EAX = 1111 1111 1111 1115
+    54 0000005A 031D[07000000]                  add EBX, dword [d + 0]
+    55 00000060 030D[0B000000]                  add ECX, dword [d + 4]
+    56                                          
+    57 00000066 F8                              clc
+    58 00000067 29D8                            sub EAX, EBX
+    59 00000069 19CA                            sbb EDX, ECX ; final result will be in EDX:EAX = EEEE EEEE EEEE F05D
+    60                                          
+    61                                          ; exit(0)
+    62 0000006B 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    63 0000006D FF15[00000000]                  call    [exit]       ; call exit to terminate the program

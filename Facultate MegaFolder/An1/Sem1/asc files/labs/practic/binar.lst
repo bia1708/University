@@ -1,0 +1,78 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  global start        
+     4                                  
+     5                                  extern exit, fopen, fclose, printf, fread               ; tell nasm that exit exists even if we won't be defining it
+     6                                  import exit msvcrt.dll   
+     7                                  import fopen msvcrt.dll    
+     8                                  import fclose msvcrt.dll    
+     9                                  import printf msvcrt.dll    
+    10                                  import fread msvcrt.dll    
+    11                                  
+    12                                  
+    13                                  segment data use32 class=data
+    14 00000000 6669736965722E7478-         file_name db "fisier.txt", 0
+    14 00000009 7400               
+    15 0000000B 7200                        access_mode db "r", 0
+    16 0000000D FFFFFFFF                    file_descriptor dd -1
+    17                                      len equ 2
+    18                                      
+    19 00000011 00<rept>                    string times 8 db 0
+    20 00000019 00000000                    number dd 0
+    21 0000001D 00000000                    real_number dd 0
+    22                                  
+    23                                  segment code use32 class=code
+    24                                      start:
+    25                                          ;string times 8 db 0 
+    26                                          ;40 / 2 = 20 r 0
+    27                                          ;mov [string + 0], rest
+    28                                          ;20 / 2 = 10 r 0
+    29                                          ;mov [string + 1], rest
+    30                                          ;10 / 2 = 5 r 0
+    31                                          ;5 / 2 = 2 r 1
+    32                                          ;2 / 2 = 1 r 0
+    33                                          ;1 / 2 = 0 r 1
+    34                                          ;nr:0 1 0 1 0 0 0 
+    35                                          ;string: 000101 0 
+    36                                          
+    37 00000000 68[0B000000]                    push access_mode
+    38 00000005 68[00000000]                    push file_name
+    39 0000000A FF15[00000000]                  call [fopen]
+    40 00000010 83C408                          add esp, 4 * 2
+    41                                          
+    42 00000013 A3[0D000000]                    mov [file_descriptor], eax
+    43 00000018 83F800                          cmp eax, 0
+    44 0000001B 7448                            je ending
+    45                                          
+    46 0000001D FF35[0D000000]                  push dword [file_descriptor]
+    47 00000023 6A02                            push len
+    48 00000025 6A01                            push dword 1
+    49 00000027 68[19000000]                    push number
+    50 0000002C FF15[00000000]                  call [fread]
+    51 00000032 83C410                          add esp, 4 * 4
+    52                                          
+    53 00000035 BB00000000                      mov ebx, 0
+    54 0000003A BA02000000                      mov edx, 2
+    55 0000003F BF00000000                      mov edi, 0
+    56                                          start_loop:
+    57 00000044 83FA00                              cmp edx, 0
+    58 00000047 741C                                je ending
+    59                                              
+    60 00000049 B80A000000                          mov eax, 10
+    61 0000004E F7E3                                mul ebx
+    62 00000050 8B8F[19000000]                      mov ecx, [number + edi]
+    63 00000056 83E930                              sub ecx, '0'
+    64 00000059 01CB                                add ebx, ecx
+    65 0000005B 891D[1D000000]                      mov [real_number], ebx
+    66 00000061 47                                  inc edi
+    67 00000062 4A                                  dec dword edx
+    68 00000063 EBDF                                jmp start_loop
+    69                                          
+    70                                          
+    71                                          ending:
+    72 00000065 FF35[0D000000]                  push dword [file_descriptor]
+    73 0000006B FF15[00000000]                  call [fclose]
+    74 00000071 83C404                          add esp, 4
+    75                                          
+    76 00000074 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    77 00000076 FF15[00000000]                  call    [exit]       ; call exit to terminate the program

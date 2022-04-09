@@ -1,0 +1,63 @@
+     1                                  ;Problem. A string of quadwords is given. Compute the number of multiples of 8 from
+     2                                  ;the string of the low bytes of the high word of the high doubleword from the elements of the quadword string 
+     3                                  ;and find the sum of the digits (in base 10) of this number.
+     4                                  
+     5                                  
+     6                                  ;Solution: We first parse the quadword string and obtain the number of multiples of 8
+     7                                  ;from the string of the low bytes of the high word of the high doubleword from the elements of the quadword string.
+     8                                  ;Then we obtain the digits of this number by successive divisions to 10 and then compute the sum of these digits.
+     9                                  
+    10                                  
+    11                                  bits 32 
+    12                                  global start
+    13                                  extern exit; tell nasm that exit exists even if we won't be defining it
+    14                                  import exit msvcrt.dll; exit is a function that ends the calling process. It is defined in msvcrt.dll
+    15                                  ; our data is declared here (the variables needed by our program)
+    16                                  segment data use32 class=data
+    17 00000000 B0BC0A1110311200D2-     	sir  dq  123110110abcb0h,1116adcb5a051ad2h,4120ca11d730cbb0h
+    17 00000009 1A055ACBAD1611B0CB-
+    17 00000012 30D711CA2041       
+    18                                  	len equ ($-sir)/8;the length of the string (in quadwords)
+    19 00000018 08                      	opt db 8;variabile used for testing divisibility to 8
+    20 00000019 0A000000                	zece dd 10;variabile used for determining the digits in base 10 of a number by successive divisions to 10
+    21 0000001D 00000000                	suma dd  0;variabile used for holding the sum of the digits 
+    22                                  ; our code starts here
+    23                                  segment code use32 class=code
+    24                                      start:
+    25 00000000 BE[00000000]            	mov esi, sir;in eds:esi we will store the FAR address of the string "sir"
+    26 00000005 FC                      	cld;parse the string from left to right(DF=0).    
+    27 00000006 B903000000              	mov ecx, len;we will parse the elements of the string in a loop with len iterations.
+    28 0000000B BB00000000              	mov ebx, 0;in ebx we will hold the number of multiples of 8.
+    29                                  	repeta:
+    30 00000010 AD                      		lodsd;in eax we will have the low doubleword (least significant) of the current quadword from the string
+    31 00000011 AD                      		lodsd;in eax we will have the high doubleword (least significant) of the current quadword from the string
+    32 00000012 C1E810                  		shr eax, 16
+    33 00000015 B400                    		mov ah, 0;we are interested in the low byte (least significant) of this word (AL)
+    34                                        
+    35 00000017 F635[18000000]          		div byte[opt];check whether al is divisible to 8
+    36 0000001D 80FC00                  		cmp ah, 0;if the remainder is 0, resume the loop "repeta". 
+    37                                  				;else increment the number of multiples of 8 from EBX. 
+    38 00000020 7501                    		jnz nonmultiplu
+    39 00000022 43                      		inc ebx
+    40                                  
+    41                                  		nonmultiplu:
+    42 00000023 E2EB                    	loop repeta;if there are more elements (ecx>0) resume the loop.
+    43                                  
+    44                                  	;next, we obtain the 10-th base digits of the number EBX by successive divisions to 10 and then compute the sum of these digits
+    45                                  
+    46 00000025 89D8                    	mov eax, ebx
+    47 00000027 BA00000000              	mov edx, 0
+    48                                      
+    49                                  	transf:
+    50 0000002C F735[19000000]          		div dword[zece];divide the number by 10 in order to obtain the last digit; this digit will be in EDX
+    51 00000032 0115[1D000000]          		add dword[suma], edx;add the digit to the sum.
+    52 00000038 83F800                  		cmp eax, 0
+    53 0000003B 7407                    	jz sfarsit;if the quotient (from al) is 0 it means we obtained all the digits and we can leave the loop "transf"
+    54                                  				;else prepare the quotient for a new iteration 
+    55 0000003D BA00000000              	mov edx, 0				
+    56 00000042 EBE8                    	jmp transf;resume the loop in order to obtain a new digit.
+    57                                  
+    58                                  sfarsit: ;end the program
+    59                                             
+    60 00000044 6A00                            push dword 0; push the parameter for exit onto the stack
+    61 00000046 FF15[00000000]                  call [exit]; call exit to terminate the program
