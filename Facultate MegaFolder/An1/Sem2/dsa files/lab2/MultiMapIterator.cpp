@@ -9,6 +9,7 @@ MultiMapIterator::MultiMapIterator(const MultiMap& c): col(c) {
     else
         currentVal = NULL;
 }
+/// theta(1)
 
 TElem MultiMapIterator::getCurrent() const{
     if (!valid()){
@@ -21,6 +22,7 @@ TElem MultiMapIterator::getCurrent() const{
     }
     return NULL_TELEM;
 }
+/// theta(1)
 
 bool MultiMapIterator::valid() const {
     if(this->col.isEmpty())
@@ -31,6 +33,7 @@ bool MultiMapIterator::valid() const {
 //        return false;
     return false;
 }
+/// theta(1)
 
 void MultiMapIterator::next() {
     if (!valid()) {
@@ -44,6 +47,7 @@ void MultiMapIterator::next() {
     }
     else this->currentVal = NULL;
 }
+/// theta(1)
 
 void MultiMapIterator::first() {
     currentNode = this->col.head;
@@ -53,4 +57,5 @@ void MultiMapIterator::first() {
     } else
         currentVal = NULL;
 }
+/// theta(1)
 

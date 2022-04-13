@@ -1,6 +1,7 @@
 
 #include <iostream>
 #include "Matrix.h"
+#include "MatrixIterator.h"
 #include "ExtendedTest.h"
 #include "ShortTest.h"
 

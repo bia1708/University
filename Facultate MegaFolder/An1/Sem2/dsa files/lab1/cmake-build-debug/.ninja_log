@@ -1,6 +1,13 @@
 # ninja log v5
 37	423	6701183401283609	CMakeFiles/lab1.dir/ShortTest.cpp.obj	477b99a5305274c5
-17	770	6701183404787493	CMakeFiles/lab1.dir/App.cpp.obj	1018e50b793248be
 297	846	6701192200315976	lab1.exe	35a18ada439ade8a
+17	770	6701183404787493	CMakeFiles/lab1.dir/App.cpp.obj	1018e50b793248be
 7	619	6701187719196294	CMakeFiles/lab1.dir/ExtendedTest.cpp.obj	4f7c0b818fec17a6
 7	295	6701192194925997	CMakeFiles/lab1.dir/Matrix.cpp.obj	d9c538917bdf3884
+7	364	6715414478239599	build.ninja	79147b184cee5825
+29	227	6715415809956307	CMakeFiles/lab1.dir/MatrixIterator.cpp.obj	a8051333fda7ceda
+22	229	6715415809956307	CMakeFiles/lab1.dir/ShortTest.cpp.obj	477b99a5305274c5
+37	265	6715415810346084	CMakeFiles/lab1.dir/Matrix.cpp.obj	d9c538917bdf3884
+15	538	6715415813076074	CMakeFiles/lab1.dir/App.cpp.obj	1018e50b793248be
+6	569	6715415813396052	CMakeFiles/lab1.dir/ExtendedTest.cpp.obj	4f7c0b818fec17a6
+570	864	6715415816256039	lab1.exe	e20885ea719da4b3

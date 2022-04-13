@@ -23,7 +23,7 @@ Matrix::~Matrix() {
     delete[] this->columnIndices;
     delete[] this->rowCounter;
 }
-
+/// theta(1)
 
 int Matrix::nrLines() const {
 	return this->nrRows;
@@ -163,3 +163,4 @@ void Matrix::resize(int newCapacity){
 MatrixIterator Matrix::iterator() const{
     return MatrixIterator(*this);
 }
+/// theta(1)

@@ -57,6 +57,9 @@ void MultiMap::add(TKey c, TValue v) {
     }
     this->length++;
 }
+/// BC: the list is empty => theta(1)
+/// WC: the key and value are the last in the SLL => theta(len(MapNode) + len(ValuesNode))
+/// AC: theta(len(MapNode) + len(ValuesNode))
 
 
 bool MultiMap::remove(TKey c, TValue v) {
@@ -115,6 +118,9 @@ bool MultiMap::remove(TKey c, TValue v) {
     }
 	return  false;
 }
+/// BC: the key-value pair is the first one in the SLL => theta(1)
+/// WC: the key-value pair is the last one in the SLL => theta(len(MapNode) * len(ValuesNode))
+/// AC: theta(len(MapNode) * len(ValuesNode))
 
 
 vector<TValue> MultiMap::search(TKey c) const {
@@ -143,6 +149,7 @@ int MultiMap::size() const {
     return this->length;
 	return 0;
 }
+/// theta(!)
 
 
 bool MultiMap::isEmpty() const {
@@ -150,11 +157,12 @@ bool MultiMap::isEmpty() const {
         return true;
 	return false;
 }
+/// theta(1)
 
 MultiMapIterator MultiMap::iterator() const {
 	return MultiMapIterator(*this);
 }
-
+/// theta(1)
 
 MultiMap::~MultiMap() {
     if(!isEmpty()){
@@ -179,4 +187,7 @@ MultiMap::~MultiMap() {
         }
     }
 }
+/// BC: the map is empty => theta(1)
+/// WC: theta(len(MapNode) + len(ValuesNode))
+/// AC: theta(len(MapNode) + len(ValuesNode))
 

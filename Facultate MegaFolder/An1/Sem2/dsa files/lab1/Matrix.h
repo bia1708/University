@@ -3,6 +3,7 @@
 typedef int TElem;
 #define NULL_TELEM 0
 
+class MatrixIterator;
 
 class Matrix {
     friend class MatrixIterator;
