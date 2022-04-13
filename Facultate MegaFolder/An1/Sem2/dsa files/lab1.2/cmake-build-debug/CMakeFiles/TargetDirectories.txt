@@ -1,0 +1,3 @@
+C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/dsa files/lab1/cmake-build-debug/CMakeFiles/lab1.dir
+C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/dsa files/lab1/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/dsa files/lab1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
