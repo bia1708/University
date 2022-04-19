@@ -1,0 +1,10 @@
+1, Atonement, Thirteen-year-old fledgling writer Briony Tallis irrevocably changes the course of several lives when she accuses her older sister's lover of a crime he did not commit., Romance
+2, A Beautiful Mind, After John Nash, a brilliant but asocial mathematician, accepts secret work in cryptography, his life takes a turn for the nightmarish., Drama
+3, Dune, Feature adaptation of Frank Herbert's science fiction novel, about the son of a noble family entrusted with the protection of the most valuable asset and most vital element in the galaxy., Action
+4, Fight Club, An insomniac office worker and a devil-may-care soap maker form an underground fight club that evolves into much more., Drama
+5, Gladiator, A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery., Drama
+6, How to Lose a Guy in 10 Days, Benjamin Barry is an advertising executive and ladies' man who, to win a big campaign, bets that he can make a woman fall in love with him in 10 days., Comedy
+7, Inglorious Basterds, In Nazi-occupied France during World War II, a plan to assassinate Nazi leaders by a group of Jewish U.S. soldiers coincides with a theatre owner's vengeful plans for the same., Action
+8, Interstellar, A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival., Sci-Fi
+9, Se7en, Two detectives, a rookie and a veteran, hunt a serial killer who uses the seven deadly sins as his motives., Mystery
+10, The Good, the Bad and the Ugly, A bounty hunting scam joins two men in an uneasy alliance against a third in a race to find a fortune in gold buried in a remote cemetery., Western
