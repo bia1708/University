@@ -1,0 +1,5 @@
+topic1,bia1,bia2,bia3
+topic2,bia2,bia3
+topic3,bia1,bia2,bia3
+topic4,bia1,bia3
+topic5,bia1

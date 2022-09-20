@@ -1,0 +1,6 @@
+3,topic2,15,18,bia2
+2,topic2,15,16,bia1
+1,topic1,12,16,bia1
+5,a,11,16,bia3
+4,topic3,10,16,bia3
+6,topic1,6,13,bia3
