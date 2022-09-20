@@ -1,0 +1,35 @@
+# ninja log v5
+1643	2528	6787183152647818	CMakeFiles/QnA.dir/Question.cpp.obj	635d4da3bb96bc02
+519	1527	6787193555782769	CMakeFiles/QnA.dir/QuestionRepo.cpp.obj	70aa13cf2538197e
+1662	2501	6787183152335318	CMakeFiles/QnA.dir/Answer.cpp.obj	5d371b2e055f5916
+10	447	6787264112145363	QnA_autogen/timestamp	7643b6b81710cbcf
+10	447	6787264112145363	C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/oop files/QnA/cmake-build-debug/QnA_autogen/mocs_compilation.cpp	7643b6b81710cbcf
+10	447	6787264112145363	QnA_autogen/mocs_compilation.cpp	7643b6b81710cbcf
+10	447	6787264112145363	C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/oop files/QnA/cmake-build-debug/QnA_autogen/timestamp	7643b6b81710cbcf
+1637	2510	6787183152179068	CMakeFiles/QnA.dir/User.cpp.obj	f9b64922b6686a4b
+428	1178	6787194590790219	CMakeFiles/QnA.dir/UserRepo.cpp.obj	5bc6c91535f47c0c
+2200	5850	6787233968924610	CMakeFiles/QnA.dir/QnA_autogen/mocs_compilation.cpp.obj	b0655bcd68b42cc
+2275	5947	6787233969904575	CMakeFiles/QnA.dir/main.cpp.obj	f2a73c012e563375
+468	3451	6787264142172029	CMakeFiles/QnA.dir/questionsgui.cpp.obj	dd8d122d18e59bc6
+570	925	6787183276713884	CMakeFiles/QnA.dir/Observer.cpp.obj	d49922a7e328d665
+3452	4220	6787264147190953	QnA.exe	c3cff6be02c35ca
+2291	3877	6787233949186160	CMakeFiles/QnA.dir/AnswerRepo.cpp.obj	dc12e3d92a5e01e
+10	519	6787266291279582	QnA_autogen/timestamp	7643b6b81710cbcf
+10	519	6787266291279582	QnA_autogen/mocs_compilation.cpp	7643b6b81710cbcf
+10	519	6787266291279582	C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/oop files/QnA/cmake-build-debug/QnA_autogen/timestamp	7643b6b81710cbcf
+10	519	6787266291279582	C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/oop files/QnA/cmake-build-debug/QnA_autogen/mocs_compilation.cpp	7643b6b81710cbcf
+559	3858	6787266324650239	CMakeFiles/QnA.dir/main.cpp.obj	f2a73c012e563375
+566	4568	6787266331766927	CMakeFiles/QnA.dir/questionsgui.cpp.obj	dd8d122d18e59bc6
+4568	5278	6787266336187379	QnA.exe	c3cff6be02c35ca
+9	419	6787268783706255	QnA_autogen/timestamp	7643b6b81710cbcf
+9	419	6787268783706255	QnA_autogen/mocs_compilation.cpp	7643b6b81710cbcf
+9	419	6787268783706255	C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/oop files/QnA/cmake-build-debug/QnA_autogen/timestamp	7643b6b81710cbcf
+9	419	6787268783706255	C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/oop files/QnA/cmake-build-debug/QnA_autogen/mocs_compilation.cpp	7643b6b81710cbcf
+439	3323	6787268812733975	CMakeFiles/QnA.dir/questionsgui.cpp.obj	dd8d122d18e59bc6
+3323	3991	6787268816730796	QnA.exe	c3cff6be02c35ca
+14	453	6787268963316948	QnA_autogen/timestamp	7643b6b81710cbcf
+14	453	6787268963316948	QnA_autogen/mocs_compilation.cpp	7643b6b81710cbcf
+14	453	6787268963316948	C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/oop files/QnA/cmake-build-debug/QnA_autogen/timestamp	7643b6b81710cbcf
+14	453	6787268963316948	C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/oop files/QnA/cmake-build-debug/QnA_autogen/mocs_compilation.cpp	7643b6b81710cbcf
+473	3350	6787268992269965	CMakeFiles/QnA.dir/questionsgui.cpp.obj	dd8d122d18e59bc6
+3351	4185	6787268997942972	QnA.exe	c3cff6be02c35ca

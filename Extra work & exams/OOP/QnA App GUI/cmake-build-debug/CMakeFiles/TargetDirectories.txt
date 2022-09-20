@@ -1,0 +1,5 @@
+C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/oop files/QnA/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/oop files/QnA/cmake-build-debug/CMakeFiles/QnA.dir
+C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/oop files/QnA/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/oop files/QnA/cmake-build-debug/CMakeFiles/QnA_autogen_timestamp_deps.dir
+C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/oop files/QnA/cmake-build-debug/CMakeFiles/QnA_autogen.dir

@@ -1,0 +1,5 @@
+text1,bia1,14,21,true
+text2,bia1,8,4,false
+text3,bia2,12,21,true
+text4,bia3,28,23,false
+text5,bia3,34,2,false

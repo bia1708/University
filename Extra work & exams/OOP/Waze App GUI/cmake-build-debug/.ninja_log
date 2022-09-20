@@ -1,0 +1,62 @@
+# ninja log v5
+27	1030	6785673017129291	Waze_autogen/timestamp	1e231b4c771595b5
+821	1803	6785645876453875	CMakeFiles/Waze.dir/DriverRepo.cpp.obj	bff238040d737d15
+27	1030	6785673017129291	Waze_autogen/mocs_compilation.cpp	1e231b4c771595b5
+2519	6260	6785670456438217	CMakeFiles/Waze.dir/main.cpp.obj	ee5c2b99ad7d0790
+27	1030	6785673017129291	C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/oop files/Waze/cmake-build-debug/Waze_autogen/timestamp	1e231b4c771595b5
+2508	3109	6784734150697609	CMakeFiles/Waze.dir/Observer.cpp.obj	272ec045a89c5132
+2489	3256	6784734152212619	CMakeFiles/Waze.dir/Driver.cpp.obj	db0d37b4eccedc44
+27	1030	6785673017129291	C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/oop files/Waze/cmake-build-debug/Waze_autogen/mocs_compilation.cpp	1e231b4c771595b5
+2256	3664	6785634571621411	CMakeFiles/Waze.dir/ReportRepo.cpp.obj	3e312d26e0eac2b6
+2511	6096	6785670454727066	CMakeFiles/Waze.dir/Waze_autogen/mocs_compilation.cpp.obj	fbd01715476f9d09
+1061	5641	6785673063243682	CMakeFiles/Waze.dir/drivergui.cpp.obj	99b104fc705cf52b
+423	773	6785556701068975	CMakeFiles/Waze.dir/Report.cpp.obj	c4b5912475e8cc77
+5642	6732	6785673070629367	Waze.exe	612eb932fd0ac613
+17	516	6785675371216293	Waze_autogen/timestamp	1e231b4c771595b5
+17	516	6785675371216293	Waze_autogen/mocs_compilation.cpp	1e231b4c771595b5
+17	516	6785675371216293	C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/oop files/Waze/cmake-build-debug/Waze_autogen/timestamp	1e231b4c771595b5
+17	516	6785675371216293	C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/oop files/Waze/cmake-build-debug/Waze_autogen/mocs_compilation.cpp	1e231b4c771595b5
+544	4711	6785675413145980	CMakeFiles/Waze.dir/drivergui.cpp.obj	99b104fc705cf52b
+4712	5533	6785675418045997	Waze.exe	612eb932fd0ac613
+21	874	6785677959065329	Waze_autogen/timestamp	1e231b4c771595b5
+21	874	6785677959065329	Waze_autogen/mocs_compilation.cpp	1e231b4c771595b5
+21	874	6785677959065329	C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/oop files/Waze/cmake-build-debug/Waze_autogen/timestamp	1e231b4c771595b5
+21	874	6785677959065329	C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/oop files/Waze/cmake-build-debug/Waze_autogen/mocs_compilation.cpp	1e231b4c771595b5
+904	5335	6785678004065478	CMakeFiles/Waze.dir/drivergui.cpp.obj	99b104fc705cf52b
+5335	6181	6785678009195489	Waze.exe	612eb932fd0ac613
+23	715	6785683783763064	Waze_autogen/timestamp	1e231b4c771595b5
+23	715	6785683783763064	Waze_autogen/mocs_compilation.cpp	1e231b4c771595b5
+23	715	6785683783763064	C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/oop files/Waze/cmake-build-debug/Waze_autogen/timestamp	1e231b4c771595b5
+23	715	6785683783763064	C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/oop files/Waze/cmake-build-debug/Waze_autogen/mocs_compilation.cpp	1e231b4c771595b5
+745	5466	6785683831262231	CMakeFiles/Waze.dir/drivergui.cpp.obj	99b104fc705cf52b
+5467	6329	6785683836682266	Waze.exe	612eb932fd0ac613
+13	559	6785691433566199	Waze_autogen/timestamp	1e231b4c771595b5
+13	559	6785691433566199	Waze_autogen/mocs_compilation.cpp	1e231b4c771595b5
+13	559	6785691433566199	C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/oop files/Waze/cmake-build-debug/Waze_autogen/timestamp	1e231b4c771595b5
+13	559	6785691433566199	C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/oop files/Waze/cmake-build-debug/Waze_autogen/mocs_compilation.cpp	1e231b4c771595b5
+581	4908	6785691477094251	CMakeFiles/Waze.dir/drivergui.cpp.obj	99b104fc705cf52b
+4909	5748	6785691482406711	Waze.exe	612eb932fd0ac613
+13	546	6785698352177286	Waze_autogen/timestamp	1e231b4c771595b5
+13	546	6785698352177286	Waze_autogen/mocs_compilation.cpp	1e231b4c771595b5
+13	546	6785698352177286	C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/oop files/Waze/cmake-build-debug/Waze_autogen/timestamp	1e231b4c771595b5
+13	546	6785698352177286	C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/oop files/Waze/cmake-build-debug/Waze_autogen/mocs_compilation.cpp	1e231b4c771595b5
+572	4386	6785698390578841	CMakeFiles/Waze.dir/drivergui.cpp.obj	99b104fc705cf52b
+4387	5196	6785698395891325	Waze.exe	612eb932fd0ac613
+26	541	6785699250166680	Waze_autogen/timestamp	1e231b4c771595b5
+26	541	6785699250166680	Waze_autogen/mocs_compilation.cpp	1e231b4c771595b5
+26	541	6785699250166680	C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/oop files/Waze/cmake-build-debug/Waze_autogen/timestamp	1e231b4c771595b5
+26	541	6785699250166680	C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/oop files/Waze/cmake-build-debug/Waze_autogen/mocs_compilation.cpp	1e231b4c771595b5
+567	4507	6785699289745959	CMakeFiles/Waze.dir/drivergui.cpp.obj	99b104fc705cf52b
+4508	5364	6785699295393868	Waze.exe	612eb932fd0ac613
+22	505	6785705261478153	Waze_autogen/timestamp	1e231b4c771595b5
+22	505	6785705261478153	Waze_autogen/mocs_compilation.cpp	1e231b4c771595b5
+22	505	6785705261478153	C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/oop files/Waze/cmake-build-debug/Waze_autogen/timestamp	1e231b4c771595b5
+22	505	6785705261478153	C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/oop files/Waze/cmake-build-debug/Waze_autogen/mocs_compilation.cpp	1e231b4c771595b5
+530	4592	6785705302421275	CMakeFiles/Waze.dir/drivergui.cpp.obj	99b104fc705cf52b
+4593	5360	6785705306964203	Waze.exe	612eb932fd0ac613
+27	549	6785712688996053	Waze_autogen/timestamp	1e231b4c771595b5
+27	549	6785712688996053	Waze_autogen/mocs_compilation.cpp	1e231b4c771595b5
+27	549	6785712688996053	C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/oop files/Waze/cmake-build-debug/Waze_autogen/timestamp	1e231b4c771595b5
+27	549	6785712688996053	C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/oop files/Waze/cmake-build-debug/Waze_autogen/mocs_compilation.cpp	1e231b4c771595b5
+575	5266	6785712736225739	CMakeFiles/Waze.dir/drivergui.cpp.obj	99b104fc705cf52b
+5267	6366	6785712743569491	Waze.exe	612eb932fd0ac613

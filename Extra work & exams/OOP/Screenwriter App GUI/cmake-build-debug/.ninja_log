@@ -1,0 +1,14 @@
+# ninja log v5
+10	404	6786607624940436	Screenwriter_autogen/timestamp	cdf60375093fd836
+10	404	6786607624940436	Screenwriter_autogen/mocs_compilation.cpp	cdf60375093fd836
+1672	2907	6786606441622754	CMakeFiles/Screenwriter.dir/WriterRepo.cpp.obj	15f1ae0269c596d3
+1787	2462	6786606437104842	CMakeFiles/Screenwriter.dir/Writer.cpp.obj	45a46f4ac836d90
+10	404	6786607624940436	C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/oop files/Screenwriter/cmake-build-debug/Screenwriter_autogen/timestamp	cdf60375093fd836
+1810	2923	6786606441662757	CMakeFiles/Screenwriter.dir/IdeaRepo.cpp.obj	845575c49f968212
+10	404	6786607624940436	C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/oop files/Screenwriter/cmake-build-debug/Screenwriter_autogen/mocs_compilation.cpp	cdf60375093fd836
+1796	2467	6786606437174834	CMakeFiles/Screenwriter.dir/Idea.cpp.obj	7f996f7747f81571
+1662	4272	6786606455296141	CMakeFiles/Screenwriter.dir/Screenwriter_autogen/mocs_compilation.cpp.obj	b7a2a59e9ed884c8
+432	2624	6786607647140736	CMakeFiles/Screenwriter.dir/main.cpp.obj	f8435a47e3c0d3e4
+428	3075	6786607651650081	CMakeFiles/Screenwriter.dir/writergui.cpp.obj	3577eccfc2d11144
+3075	3713	6786607654957029	Screenwriter.exe	23ce37455ae8d04d
+6	1133	6786619576357297	build.ninja	94e9f3e514ca8ef4

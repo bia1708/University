@@ -1,0 +1,5 @@
+1,1,bia2,text1,2
+2,1,bia3,text2,1
+3,2,bia2,text3,0
+4,2,bia1,text4,5
+5,3,bia3,text5,12

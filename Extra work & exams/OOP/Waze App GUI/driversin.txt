@@ -1,0 +1,3 @@
+bia1,baby,12,10,9
+bia2,grown-up,41,13,14
+bia3,knight,32,17,18

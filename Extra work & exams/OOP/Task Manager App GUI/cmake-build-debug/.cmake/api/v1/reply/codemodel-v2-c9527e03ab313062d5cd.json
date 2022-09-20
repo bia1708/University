@@ -1,0 +1,78 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Task_Manager",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Task_Manager::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Task_Manager-Debug-6f5776783d5a7132cdfa.json",
+					"name" : "Task_Manager",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Task_Manager_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Task_Manager_autogen-Debug-113982dd64fa8c25392b.json",
+					"name" : "Task_Manager_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Task_Manager_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Task_Manager_autogen_timestamp_deps-Debug-6189ecccbd14aa6008e7.json",
+					"name" : "Task_Manager_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/oop files/Task Manager/cmake-build-debug",
+		"source" : "C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/oop files/Task Manager"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}
