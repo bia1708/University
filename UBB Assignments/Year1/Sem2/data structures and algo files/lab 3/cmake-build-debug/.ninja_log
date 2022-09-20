@@ -1,0 +1,23 @@
+# ninja log v5
+15	164	6732129408670203	CMakeFiles/App.cpp.dir/ShortTest.cpp.obj	1966007adf7b983b
+22	610	6732129413142419	CMakeFiles/App.cpp.dir/SortedIndexeList.cpp.obj	84bddc0e52e89d2e
+0	605	6732129413092495	CMakeFiles/App.cpp.dir/ListIterator.cpp.obj	d6de1a7f88e99d99
+8	699	6732129414032437	CMakeFiles/App.cpp.dir/ExtendedTest.cpp.obj	2177773ef5eed92a
+12	454	6733649271713377	CMakeFiles/lab_3.dir/ShortTest.cpp.obj	d13ae2c7bf959b8b
+114	946	6733643264250477	CMakeFiles/lab_3.dir/SortedIndexeList.cpp.obj	ad6d232ca70410a7
+42	1167	6733643266489351	CMakeFiles/lab_3.dir/App.cpp.obj	75724edf70b14ee7
+8	528	6733650744437466	CMakeFiles/lab_3.dir/ListIterator.cpp.obj	c2b699b251dac938
+24	1413	6733643268967070	CMakeFiles/lab_3.dir/ExtendedTest.cpp.obj	349386644399969
+529	715	6733650746205744	lab_3.exe	ac9c2e46989c7ab
+4	441	6733656062640870	CMakeFiles/lab_3.dir/ListIterator.cpp.obj	c2b699b251dac938
+443	637	6733656064456681	lab_3.exe	ac9c2e46989c7ab
+4	462	6733657403021118	CMakeFiles/lab_3.dir/ListIterator.cpp.obj	c2b699b251dac938
+463	733	6733657405653644	lab_3.exe	ac9c2e46989c7ab
+5	582	6733658330003243	CMakeFiles/lab_3.dir/ShortTest.cpp.obj	d13ae2c7bf959b8b
+583	770	6733658331780574	lab_3.exe	ac9c2e46989c7ab
+5	498	6733660407025781	CMakeFiles/lab_3.dir/ListIterator.cpp.obj	c2b699b251dac938
+499	792	6733660409862127	lab_3.exe	ac9c2e46989c7ab
+12	458	6733661236642279	CMakeFiles/lab_3.dir/ListIterator.cpp.obj	c2b699b251dac938
+459	780	6733661239784421	lab_3.exe	ac9c2e46989c7ab
+3	502	6733677633137949	CMakeFiles/lab_3.dir/ListIterator.cpp.obj	c2b699b251dac938
+503	715	6733677635159423	lab_3.exe	ac9c2e46989c7ab
