@@ -1,5 +1,5 @@
-C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/oop files/Task Manager/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/oop files/Task Manager/cmake-build-debug/CMakeFiles/Task_Manager.dir
-C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/oop files/Task Manager/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/oop files/Task Manager/cmake-build-debug/CMakeFiles/Task_Manager_autogen_timestamp_deps.dir
-C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/oop files/Task Manager/cmake-build-debug/CMakeFiles/Task_Manager_autogen.dir
+C:/Users/PC/Documents/GitHub/University-projects-and-stuff/Extra work & exams/OOP/Task Manager App GUI/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/PC/Documents/GitHub/University-projects-and-stuff/Extra work & exams/OOP/Task Manager App GUI/cmake-build-debug/CMakeFiles/Task_Manager.dir
+C:/Users/PC/Documents/GitHub/University-projects-and-stuff/Extra work & exams/OOP/Task Manager App GUI/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/PC/Documents/GitHub/University-projects-and-stuff/Extra work & exams/OOP/Task Manager App GUI/cmake-build-debug/CMakeFiles/Task_Manager_autogen_timestamp_deps.dir
+C:/Users/PC/Documents/GitHub/University-projects-and-stuff/Extra work & exams/OOP/Task Manager App GUI/cmake-build-debug/CMakeFiles/Task_Manager_autogen.dir

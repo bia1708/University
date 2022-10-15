@@ -1,5 +1,5 @@
-1,text1,bia1
-2,text2,bia1
-3,text3,bia2
-4,text4,bia3
-5,text5,bia3
+1,How is cheese made?,bia
+2,What's a byte?,bia
+3,Best place to eat?,liam
+4,Are ghosts real?,carl
+5,How old is everyone?,carl

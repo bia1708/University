@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/oop files/Task Manager/cmake-build-debug"
+			"value" : "c:/Users/PC/Documents/GitHub/University-projects-and-stuff/Extra work & exams/OOP/Task Manager App GUI/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -647,7 +647,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/oop files/Task Manager"
+			"value" : "C:/Users/PC/Documents/GitHub/University-projects-and-stuff/Extra work & exams/OOP/Task Manager App GUI"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -5583,7 +5583,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/oop files/Task Manager/cmake-build-debug"
+			"value" : "C:/Users/PC/Documents/GitHub/University-projects-and-stuff/Extra work & exams/OOP/Task Manager App GUI/cmake-build-debug"
 		},
 		{
 			"name" : "Task_Manager_IS_TOP_LEVEL",
@@ -5607,7 +5607,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/oop files/Task Manager"
+			"value" : "C:/Users/PC/Documents/GitHub/University-projects-and-stuff/Extra work & exams/OOP/Task Manager App GUI"
 		},
 		{
 			"name" : "Vulkan_GLSLANG_VALIDATOR_EXECUTABLE",

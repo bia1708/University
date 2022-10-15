@@ -43,7 +43,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Task_Manager::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Task_Manager-Debug-6f5776783d5a7132cdfa.json",
+					"jsonFile" : "target-Task_Manager-Debug-7b2381cd1c72521ae386.json",
 					"name" : "Task_Manager",
 					"projectIndex" : 0
 				},
@@ -67,8 +67,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/oop files/Task Manager/cmake-build-debug",
-		"source" : "C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/oop files/Task Manager"
+		"build" : "C:/Users/PC/Documents/GitHub/University-projects-and-stuff/Extra work & exams/OOP/Task Manager App GUI/cmake-build-debug",
+		"source" : "C:/Users/PC/Documents/GitHub/University-projects-and-stuff/Extra work & exams/OOP/Task Manager App GUI"
 	},
 	"version" : 
 	{

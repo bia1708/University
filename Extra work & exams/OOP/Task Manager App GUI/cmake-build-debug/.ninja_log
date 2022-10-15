@@ -1,8 +1,8 @@
 # ninja log v5
-14	865	6786689281801630	Task_Manager_autogen/mocs_compilation.cpp	6196a01aedb96e61
-14	865	6786689281801630	Task_Manager_autogen/timestamp	6196a01aedb96e61
-14	865	6786689281801630	C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/oop files/Task Manager/cmake-build-debug/Task_Manager_autogen/timestamp	6196a01aedb96e61
-14	865	6786689281801630	C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/oop files/Task Manager/cmake-build-debug/Task_Manager_autogen/mocs_compilation.cpp	6196a01aedb96e61
+13	446	6786690775549012	Task_Manager_autogen/mocs_compilation.cpp	6196a01aedb96e61
+13	446	6786690775549012	Task_Manager_autogen/timestamp	6196a01aedb96e61
+13	446	6786690775549012	C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/oop files/Task Manager/cmake-build-debug/Task_Manager_autogen/timestamp	6196a01aedb96e61
+13	446	6786690775549012	C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/oop files/Task Manager/cmake-build-debug/Task_Manager_autogen/mocs_compilation.cpp	6196a01aedb96e61
 1607	2301	6782941956781137	CMakeFiles/Task_Manager.dir/Observer.cpp.obj	b6f83976f5ce6033
 1571	2406	6782941958051131	CMakeFiles/Task_Manager.dir/Programmer.cpp.obj	d604d88d3cf93781
 1558	2410	6782941958001123	CMakeFiles/Task_Manager.dir/Task.cpp.obj	934c52ca7a4fae62
@@ -10,11 +10,25 @@
 891	2119	6786689294320673	CMakeFiles/Task_Manager.dir/TaskRepository.cpp.obj	f303eaec344de84
 2235	5243	6786562613450425	CMakeFiles/Task_Manager.dir/Task_Manager_autogen/mocs_compilation.cpp.obj	e6760e29e321be3
 2241	5339	6786562614419009	CMakeFiles/Task_Manager.dir/main.cpp.obj	60d56f464bfcb1f0
-2120	2991	6786689299688996	Task_Manager.exe	e9309e3ea427f189
-534	3694	6786563056728735	CMakeFiles/Task_Manager.dir/gui.cpp.obj	ddaed352c0e65f98
-13	446	6786690775549012	Task_Manager_autogen/timestamp	6196a01aedb96e61
-13	446	6786690775549012	Task_Manager_autogen/mocs_compilation.cpp	6196a01aedb96e61
-13	446	6786690775549012	C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/oop files/Task Manager/cmake-build-debug/Task_Manager_autogen/timestamp	6196a01aedb96e61
-13	446	6786690775549012	C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/oop files/Task Manager/cmake-build-debug/Task_Manager_autogen/mocs_compilation.cpp	6196a01aedb96e61
-467	5024	6786690821331929	CMakeFiles/Task_Manager.dir/gui.cpp.obj	ddaed352c0e65f98
 5025	6125	6786690828226957	Task_Manager.exe	e9309e3ea427f189
+467	5024	6786690821331929	CMakeFiles/Task_Manager.dir/gui.cpp.obj	ddaed352c0e65f98
+14	1549	6875464145798835	Task_Manager_autogen/timestamp	7e7c83020f9f446
+14	1549	6875464145798835	Task_Manager_autogen/mocs_compilation.cpp	7e7c83020f9f446
+14	1549	6875464145798835	C:/Users/PC/Documents/GitHub/University-projects-and-stuff/Extra work & exams/OOP/Task Manager App GUI/cmake-build-debug/Task_Manager_autogen/timestamp	7e7c83020f9f446
+14	1549	6875464145798835	C:/Users/PC/Documents/GitHub/University-projects-and-stuff/Extra work & exams/OOP/Task Manager App GUI/cmake-build-debug/Task_Manager_autogen/mocs_compilation.cpp	7e7c83020f9f446
+1583	2022	6875464153408846	CMakeFiles/Task_Manager.dir/Observer.cpp.obj	34fa66ec121b42ae
+1564	2441	6875464157698848	CMakeFiles/Task_Manager.dir/Programmer.cpp.obj	50fd8d0b3cb43e22
+1555	2445	6875464157728855	CMakeFiles/Task_Manager.dir/Task.cpp.obj	797e377903c39667
+1569	3244	6875464165668838	CMakeFiles/Task_Manager.dir/ProgrammerRepository.cpp.obj	157afea6556e82c
+1574	3265	6875464165908859	CMakeFiles/Task_Manager.dir/TaskRepository.cpp.obj	5f00f39594510393
+1550	4851	6875464181798839	CMakeFiles/Task_Manager.dir/Task_Manager_autogen/mocs_compilation.cpp.obj	b72cb49c24d20d04
+1560	5183	6875464185128869	CMakeFiles/Task_Manager.dir/main.cpp.obj	c35c375ef122847e
+1579	5827	6875464191556350	CMakeFiles/Task_Manager.dir/gui.cpp.obj	d19a6d05edec8350
+52	876	6875464305500554	CMakeFiles/Task_Manager.dir/Observer.cpp.obj	34fa66ec121b42ae
+24	899	6875464305690557	CMakeFiles/Task_Manager.dir/Task.cpp.obj	797e377903c39667
+35	913	6875464305880528	CMakeFiles/Task_Manager.dir/Programmer.cpp.obj	50fd8d0b3cb43e22
+46	1448	6875464311300546	CMakeFiles/Task_Manager.dir/ProgrammerRepository.cpp.obj	157afea6556e82c
+41	1472	6875464311540521	CMakeFiles/Task_Manager.dir/TaskRepository.cpp.obj	5f00f39594510393
+19	3211	6875464328931339	CMakeFiles/Task_Manager.dir/Task_Manager_autogen/mocs_compilation.cpp.obj	b72cb49c24d20d04
+29	3448	6875464331281333	CMakeFiles/Task_Manager.dir/main.cpp.obj	c35c375ef122847e
+57	4100	6875464337817114	CMakeFiles/Task_Manager.dir/gui.cpp.obj	d19a6d05edec8350

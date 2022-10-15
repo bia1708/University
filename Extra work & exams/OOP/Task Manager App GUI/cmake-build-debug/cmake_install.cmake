@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/oop files/Task Manager
+# Install script for directory: C:/Users/PC/Documents/GitHub/University-projects-and-stuff/Extra work & exams/OOP/Task Manager App GUI
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/PC/Documents/Facultate MegaFolder/An1/Sem2/oop files/Task Manager/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/PC/Documents/GitHub/University-projects-and-stuff/Extra work & exams/OOP/Task Manager App GUI/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -25,6 +25,7 @@ QuestionsGUI::~QuestionsGUI() {
 
 void QuestionsGUI::populate() {
     this->ui->listWidget->clear();
+    this->ui->spinBox->clear();
 
     this->repo.sort();
     for(auto q : this->repo.getAll()) {
@@ -32,7 +33,7 @@ void QuestionsGUI::populate() {
                                                              + " | Posted by: " + q.getCreator() + " | Answers : " +
                                                              std::to_string(q.getAnswers())));
         if (q.getCreator() == u->getName()) {
-            i->setBackground(QBrush("yellow"));
+            i->setBackground(QBrush(QColor(212,175,55)));
         }
         this->ui->listWidget->addItem(i);
     }
@@ -66,10 +67,10 @@ void QuestionsGUI::connect() {
         this->ui->listWidget_2->clear();
         for(auto a: this->arepo.getById(id)) {
             auto *i = new QListWidgetItem(QString::fromStdString(
-                    std::to_string(a.getId()) + " " + std::to_string(a.getQId()) + " " + a.getText() + " " +
-                    a.getAName() + " " + std::to_string(a.getVotes())));
+                    std::to_string(a.getId()) + " | " + a.getText() + " | Posted by: " +
+                    a.getAName() + " | Upvotes: " + std::to_string(a.getVotes())));
             if (a.getAName() == u->getName()) {
-                i->setBackground(QBrush("yellow"));
+                i->setBackground(QBrush(QColor(126,176,76)));
             }
             this->ui->listWidget_2->addItem(i);
         }
@@ -104,6 +105,7 @@ void QuestionsGUI::connect() {
         std::string line = this->ui->listWidget_2->item(this->ui->listWidget_2->currentRow())->text().toStdString();
         int aId = (int)line[0] - 48;
         this->arepo[aId - 1].setVotes(this->ui->spinBox->value());
+
         this->repo.notify();
     });
 }

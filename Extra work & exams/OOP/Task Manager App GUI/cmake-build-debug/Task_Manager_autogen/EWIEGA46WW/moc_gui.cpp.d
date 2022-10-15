@@ -1,5 +1,5 @@
-C:/Users/PC/Documents/Facultate\ MegaFolder/An1/Sem2/oop\ files/Task\ Manager/cmake-build-debug/Task_Manager_autogen/EWIEGA46WW/moc_gui.cpp: C:/Users/PC/Documents/Facultate\ MegaFolder/An1/Sem2/oop\ files/Task\ Manager/gui.h \
-  C:/Users/PC/Documents/Facultate\ MegaFolder/An1/Sem2/oop\ files/Task\ Manager/cmake-build-debug/Task_Manager_autogen/moc_predefs.h \
+C:/Users/PC/Documents/GitHub/University-projects-and-stuff/Extra\ work\ &\ exams/OOP/Task\ Manager\ App\ GUI/cmake-build-debug/Task_Manager_autogen/EWIEGA46WW/moc_gui.cpp: C:/Users/PC/Documents/GitHub/University-projects-and-stuff/Extra\ work\ &\ exams/OOP/Task\ Manager\ App\ GUI/gui.h \
+  C:/Users/PC/Documents/GitHub/University-projects-and-stuff/Extra\ work\ &\ exams/OOP/Task\ Manager\ App\ GUI/cmake-build-debug/Task_Manager_autogen/moc_predefs.h \
   C:/Program\ Files/JetBrains/CLion\ 2021.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed/limits.h \
   C:/Program\ Files/JetBrains/CLion\ 2021.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed/syslimits.h \
   C:/Program\ Files/JetBrains/CLion\ 2021.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/algorithm \
@@ -319,8 +319,8 @@ C:/Users/PC/Documents/Facultate\ MegaFolder/An1/Sem2/oop\ files/Task\ Manager/cm
   C:/Qt/6.2.4/mingw_64/include/QtWidgets/qtwidgets-config.h \
   C:/Qt/6.2.4/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
   C:/Qt/6.2.4/mingw_64/include/QtWidgets/qwidget.h \
-  C:/Users/PC/Documents/Facultate\ MegaFolder/An1/Sem2/oop\ files/Task\ Manager/Observer.h \
-  C:/Users/PC/Documents/Facultate\ MegaFolder/An1/Sem2/oop\ files/Task\ Manager/Programmer.h \
-  C:/Users/PC/Documents/Facultate\ MegaFolder/An1/Sem2/oop\ files/Task\ Manager/ProgrammerRepository.h \
-  C:/Users/PC/Documents/Facultate\ MegaFolder/An1/Sem2/oop\ files/Task\ Manager/Task.h \
-  C:/Users/PC/Documents/Facultate\ MegaFolder/An1/Sem2/oop\ files/Task\ Manager/TaskRepository.h
+  C:/Users/PC/Documents/GitHub/University-projects-and-stuff/Extra\ work\ &\ exams/OOP/Task\ Manager\ App\ GUI/Observer.h \
+  C:/Users/PC/Documents/GitHub/University-projects-and-stuff/Extra\ work\ &\ exams/OOP/Task\ Manager\ App\ GUI/Programmer.h \
+  C:/Users/PC/Documents/GitHub/University-projects-and-stuff/Extra\ work\ &\ exams/OOP/Task\ Manager\ App\ GUI/ProgrammerRepository.h \
+  C:/Users/PC/Documents/GitHub/University-projects-and-stuff/Extra\ work\ &\ exams/OOP/Task\ Manager\ App\ GUI/Task.h \
+  C:/Users/PC/Documents/GitHub/University-projects-and-stuff/Extra\ work\ &\ exams/OOP/Task\ Manager\ App\ GUI/TaskRepository.h
