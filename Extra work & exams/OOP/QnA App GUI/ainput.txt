@@ -1,5 +1,0 @@
-1,1,liam,idk,2
-2,1,carl,from fermented milk!,1
-3,2,liam,a unit of information consisting of 8 bits,0
-4,2,bia,thx alot liam,5
-5,3,carl,definitely taco bell!,12
