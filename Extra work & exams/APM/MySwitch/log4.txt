@@ -1,0 +1,272 @@
+Program state
+ID: 4 
+Exe Stack: (string fileName;(fileName=test.txt;(Open(fileName);(int x;(Read From fileName into x;(print(x);(Read From fileName into x;(print(x);close(fileName)))))))))  
+Sym Table:  
+Output Console:  
+FileTable:  
+Heap:  
+
+Program state
+ID: 4 
+Exe Stack: (fileName=test.txt;(Open(fileName);(int x;(Read From fileName into x;(print(x);(Read From fileName into x;(print(x);close(fileName)))))))) string fileName  
+Sym Table:  
+Output Console:  
+FileTable:  
+Heap:  
+
+Program state
+ID: 4 
+Exe Stack: (fileName=test.txt;(Open(fileName);(int x;(Read From fileName into x;(print(x);(Read From fileName into x;(print(x);close(fileName)))))))) string fileName  
+Sym Table:  
+Output Console:  
+FileTable:  
+Heap:  
+
+Program state
+ID: 4 
+Exe Stack: (fileName=test.txt;(Open(fileName);(int x;(Read From fileName into x;(print(x);(Read From fileName into x;(print(x);close(fileName))))))))  
+Sym Table: fileName-  
+Output Console:  
+FileTable:  
+Heap:  
+
+Program state
+ID: 4 
+Exe Stack: (fileName=test.txt;(Open(fileName);(int x;(Read From fileName into x;(print(x);(Read From fileName into x;(print(x);close(fileName))))))))  
+Sym Table: fileName-  
+Output Console:  
+FileTable:  
+Heap:  
+
+Program state
+ID: 4 
+Exe Stack: (Open(fileName);(int x;(Read From fileName into x;(print(x);(Read From fileName into x;(print(x);close(fileName))))))) fileName=test.txt  
+Sym Table: fileName-  
+Output Console:  
+FileTable:  
+Heap:  
+
+Program state
+ID: 4 
+Exe Stack: (Open(fileName);(int x;(Read From fileName into x;(print(x);(Read From fileName into x;(print(x);close(fileName))))))) fileName=test.txt  
+Sym Table: fileName-  
+Output Console:  
+FileTable:  
+Heap:  
+
+Program state
+ID: 4 
+Exe Stack: (Open(fileName);(int x;(Read From fileName into x;(print(x);(Read From fileName into x;(print(x);close(fileName)))))))  
+Sym Table: fileName-test.txt  
+Output Console:  
+FileTable:  
+Heap:  
+
+Program state
+ID: 4 
+Exe Stack: (Open(fileName);(int x;(Read From fileName into x;(print(x);(Read From fileName into x;(print(x);close(fileName)))))))  
+Sym Table: fileName-test.txt  
+Output Console:  
+FileTable:  
+Heap:  
+
+Program state
+ID: 4 
+Exe Stack: (int x;(Read From fileName into x;(print(x);(Read From fileName into x;(print(x);close(fileName)))))) Open(fileName)  
+Sym Table: fileName-test.txt  
+Output Console:  
+FileTable:  
+Heap:  
+
+Program state
+ID: 4 
+Exe Stack: (int x;(Read From fileName into x;(print(x);(Read From fileName into x;(print(x);close(fileName)))))) Open(fileName)  
+Sym Table: fileName-test.txt  
+Output Console:  
+FileTable:  
+Heap:  
+
+Program state
+ID: 4 
+Exe Stack: (int x;(Read From fileName into x;(print(x);(Read From fileName into x;(print(x);close(fileName))))))  
+Sym Table: fileName-test.txt  
+Output Console:  
+FileTable: test.txt-java.io.BufferedReader@ee7d9f1  
+Heap:  
+
+Program state
+ID: 4 
+Exe Stack: (int x;(Read From fileName into x;(print(x);(Read From fileName into x;(print(x);close(fileName))))))  
+Sym Table: fileName-test.txt  
+Output Console:  
+FileTable: test.txt-java.io.BufferedReader@ee7d9f1  
+Heap:  
+
+Program state
+ID: 4 
+Exe Stack: (Read From fileName into x;(print(x);(Read From fileName into x;(print(x);close(fileName))))) int x  
+Sym Table: fileName-test.txt  
+Output Console:  
+FileTable: test.txt-java.io.BufferedReader@ee7d9f1  
+Heap:  
+
+Program state
+ID: 4 
+Exe Stack: (Read From fileName into x;(print(x);(Read From fileName into x;(print(x);close(fileName))))) int x  
+Sym Table: fileName-test.txt  
+Output Console:  
+FileTable: test.txt-java.io.BufferedReader@ee7d9f1  
+Heap:  
+
+Program state
+ID: 4 
+Exe Stack: (Read From fileName into x;(print(x);(Read From fileName into x;(print(x);close(fileName)))))  
+Sym Table: fileName-test.txt x-0  
+Output Console:  
+FileTable: test.txt-java.io.BufferedReader@ee7d9f1  
+Heap:  
+
+Program state
+ID: 4 
+Exe Stack: (Read From fileName into x;(print(x);(Read From fileName into x;(print(x);close(fileName)))))  
+Sym Table: fileName-test.txt x-0  
+Output Console:  
+FileTable: test.txt-java.io.BufferedReader@ee7d9f1  
+Heap:  
+
+Program state
+ID: 4 
+Exe Stack: (print(x);(Read From fileName into x;(print(x);close(fileName)))) Read From fileName into x  
+Sym Table: fileName-test.txt x-0  
+Output Console:  
+FileTable: test.txt-java.io.BufferedReader@ee7d9f1  
+Heap:  
+
+Program state
+ID: 4 
+Exe Stack: (print(x);(Read From fileName into x;(print(x);close(fileName)))) Read From fileName into x  
+Sym Table: fileName-test.txt x-0  
+Output Console:  
+FileTable: test.txt-java.io.BufferedReader@ee7d9f1  
+Heap:  
+
+Program state
+ID: 4 
+Exe Stack: (print(x);(Read From fileName into x;(print(x);close(fileName))))  
+Sym Table: fileName-test.txt x-112  
+Output Console:  
+FileTable: test.txt-java.io.BufferedReader@ee7d9f1  
+Heap:  
+
+Program state
+ID: 4 
+Exe Stack: (print(x);(Read From fileName into x;(print(x);close(fileName))))  
+Sym Table: fileName-test.txt x-112  
+Output Console:  
+FileTable: test.txt-java.io.BufferedReader@ee7d9f1  
+Heap:  
+
+Program state
+ID: 4 
+Exe Stack: (Read From fileName into x;(print(x);close(fileName))) print(x)  
+Sym Table: fileName-test.txt x-112  
+Output Console:  
+FileTable: test.txt-java.io.BufferedReader@ee7d9f1  
+Heap:  
+
+Program state
+ID: 4 
+Exe Stack: (Read From fileName into x;(print(x);close(fileName))) print(x)  
+Sym Table: fileName-test.txt x-112  
+Output Console:  
+FileTable: test.txt-java.io.BufferedReader@ee7d9f1  
+Heap:  
+
+Program state
+ID: 4 
+Exe Stack: (Read From fileName into x;(print(x);close(fileName)))  
+Sym Table: fileName-test.txt x-112  
+Output Console: 112  
+FileTable: test.txt-java.io.BufferedReader@ee7d9f1  
+Heap:  
+
+Program state
+ID: 4 
+Exe Stack: (Read From fileName into x;(print(x);close(fileName)))  
+Sym Table: fileName-test.txt x-112  
+Output Console: 112  
+FileTable: test.txt-java.io.BufferedReader@ee7d9f1  
+Heap:  
+
+Program state
+ID: 4 
+Exe Stack: (print(x);close(fileName)) Read From fileName into x  
+Sym Table: fileName-test.txt x-112  
+Output Console: 112  
+FileTable: test.txt-java.io.BufferedReader@ee7d9f1  
+Heap:  
+
+Program state
+ID: 4 
+Exe Stack: (print(x);close(fileName)) Read From fileName into x  
+Sym Table: fileName-test.txt x-112  
+Output Console: 112  
+FileTable: test.txt-java.io.BufferedReader@ee7d9f1  
+Heap:  
+
+Program state
+ID: 4 
+Exe Stack: (print(x);close(fileName))  
+Sym Table: fileName-test.txt x-423  
+Output Console: 112  
+FileTable: test.txt-java.io.BufferedReader@ee7d9f1  
+Heap:  
+
+Program state
+ID: 4 
+Exe Stack: (print(x);close(fileName))  
+Sym Table: fileName-test.txt x-423  
+Output Console: 112  
+FileTable: test.txt-java.io.BufferedReader@ee7d9f1  
+Heap:  
+
+Program state
+ID: 4 
+Exe Stack: close(fileName) print(x)  
+Sym Table: fileName-test.txt x-423  
+Output Console: 112  
+FileTable: test.txt-java.io.BufferedReader@ee7d9f1  
+Heap:  
+
+Program state
+ID: 4 
+Exe Stack: close(fileName) print(x)  
+Sym Table: fileName-test.txt x-423  
+Output Console: 112  
+FileTable: test.txt-java.io.BufferedReader@ee7d9f1  
+Heap:  
+
+Program state
+ID: 4 
+Exe Stack: close(fileName)  
+Sym Table: fileName-test.txt x-423  
+Output Console: 112 423  
+FileTable: test.txt-java.io.BufferedReader@ee7d9f1  
+Heap:  
+
+Program state
+ID: 4 
+Exe Stack: close(fileName)  
+Sym Table: fileName-test.txt x-423  
+Output Console: 112 423  
+FileTable: test.txt-java.io.BufferedReader@ee7d9f1  
+Heap:  
+
+Program state
+ID: 4 
+Exe Stack:  
+Sym Table: fileName-test.txt x-423  
+Output Console: 112 423  
+FileTable:  
+Heap:  
+

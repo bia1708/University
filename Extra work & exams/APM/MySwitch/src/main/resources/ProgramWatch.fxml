@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.Scene?>
+<?import javafx.scene.text.*?>
+<Scene xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea">
+    <root>
+        <GridPane alignment="CENTER" prefHeight="748.0" prefWidth="686.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="588.0" minWidth="10.0" prefWidth="350.0"/>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="487.0" minWidth="10.0"
+                                   prefWidth="342.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="273.0" minHeight="0.0" prefHeight="21.0" vgrow="SOMETIMES"/>
+                <RowConstraints maxHeight="319.0" minHeight="10.0" prefHeight="154.0" vgrow="SOMETIMES"/>
+                <RowConstraints maxHeight="212.0" minHeight="0.0" prefHeight="23.0" vgrow="SOMETIMES"/>
+                <RowConstraints maxHeight="291.0" minHeight="10.0" prefHeight="290.0" vgrow="SOMETIMES"/>
+                <RowConstraints maxHeight="241.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES"/>
+                <RowConstraints maxHeight="281.0" minHeight="10.0" prefHeight="226.0" vgrow="SOMETIMES"/>
+                <RowConstraints maxHeight="241.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <children>
+                <TableView fx:id="symbolsTable" prefHeight="110.0" prefWidth="343.0" GridPane.halignment="CENTER"
+                           GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER"
+                           GridPane.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="symbolsTableVariableNameColumn" editable="false" prefWidth="175.0"
+                                     resizable="false" text="Variable Name"/>
+                        <TableColumn fx:id="symbolsTableValueColumn" editable="false" minWidth="0.0" prefWidth="174.0"
+                                     resizable="false" text="Value"/>
+                    </columns>
+                </TableView>
+                <TableView fx:id="heapTable" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1"
+                           GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3"
+                           GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="heapTableAddressColumn" prefWidth="175.0" resizable="false" text="Address"/>
+                        <TableColumn fx:id="heapTableValueColumn" prefWidth="173.0" resizable="false" text="Value"/>
+                    </columns>
+                </TableView>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Symbols Table" textAlignment="CENTER"
+                      wrappingWidth="341.21630859375" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS"
+                      GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS"/>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Heap Table" textAlignment="CENTER"
+                      GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS"
+                      GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS"/>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Program States" textAlignment="CENTER"
+                      GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER"
+                      GridPane.vgrow="ALWAYS"/>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Stack" textAlignment="CENTER"
+                      GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS"
+                      GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS"/>
+                <ListView fx:id="programStatesList" prefHeight="200.0" prefWidth="200.0" GridPane.halignment="CENTER"
+                          GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER"
+                          GridPane.vgrow="ALWAYS"/>
+                <ListView fx:id="stackList" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1"
+                          GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1"
+                          GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS"/>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Out" textAlignment="CENTER"
+                      GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4"
+                      GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS"/>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Open Files" textAlignment="CENTER"
+                      GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS"
+                      GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS"/>
+                <ListView fx:id="outList" prefHeight="200.0" prefWidth="200.0" GridPane.halignment="CENTER"
+                          GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.valignment="CENTER"
+                          GridPane.vgrow="ALWAYS"/>
+                <ListView fx:id="filesList" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1"
+                          GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5"
+                          GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS"/>
+                <HBox prefHeight="100.0" prefWidth="200.0" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS"
+                      GridPane.rowIndex="6" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                    <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Program States:"
+                              textAlignment="CENTER" wrappingWidth="208.21630859375" HBox.hgrow="ALWAYS"/>
+                        <TextField fx:id="numberOfProgramStates" editable="false" prefHeight="12.0" prefWidth="84.0"/>
+                    </children>
+                </HBox>
+                <Button fx:id="oneStepButton" mnemonicParsing="false" text="Run One Step" GridPane.columnIndex="1"
+                        GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6"
+                        GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS"/>
+            </children>
+        </GridPane>
+    </root>
+</Scene>

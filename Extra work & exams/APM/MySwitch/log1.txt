@@ -1,0 +1,80 @@
+Program state
+ID: 1 
+Exe Stack: (int x;(x=17;print(x)))  
+Sym Table:  
+Output Console:  
+FileTable:  
+Heap:  
+
+Program state
+ID: 1 
+Exe Stack: (x=17;print(x)) int x  
+Sym Table:  
+Output Console:  
+FileTable:  
+Heap:  
+
+Program state
+ID: 1 
+Exe Stack: (x=17;print(x)) int x  
+Sym Table:  
+Output Console:  
+FileTable:  
+Heap:  
+
+Program state
+ID: 1 
+Exe Stack: (x=17;print(x))  
+Sym Table: x-0  
+Output Console:  
+FileTable:  
+Heap:  
+
+Program state
+ID: 1 
+Exe Stack: (x=17;print(x))  
+Sym Table: x-0  
+Output Console:  
+FileTable:  
+Heap:  
+
+Program state
+ID: 1 
+Exe Stack: print(x) x=17  
+Sym Table: x-0  
+Output Console:  
+FileTable:  
+Heap:  
+
+Program state
+ID: 1 
+Exe Stack: print(x) x=17  
+Sym Table: x-0  
+Output Console:  
+FileTable:  
+Heap:  
+
+Program state
+ID: 1 
+Exe Stack: print(x)  
+Sym Table: x-17  
+Output Console:  
+FileTable:  
+Heap:  
+
+Program state
+ID: 1 
+Exe Stack: print(x)  
+Sym Table: x-17  
+Output Console:  
+FileTable:  
+Heap:  
+
+Program state
+ID: 1 
+Exe Stack:  
+Sym Table: x-17  
+Output Console: 17  
+FileTable:  
+Heap:  
+
