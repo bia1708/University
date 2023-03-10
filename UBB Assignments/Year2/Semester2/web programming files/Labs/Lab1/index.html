@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans@1&display=swap" rel="stylesheet"> -->
+    <!-- TODO: add font family to css file for next lab-->
+
+    <title>Food Diary</title>
+</head>
+
+<body>
+    <div class="dropdown" id="drd">
+        <button class="dropbtn" id="btn">Menu</button>
+        <nav class="dropdown-content" id="nav">
+            <a href="index.html#introduction">Introduction</a>
+            <a href="index.html#sweden">Sweden</a>
+        </nav>
+    </div>
+
+    <main>
+        <article class="titlepage">
+            <header>
+                <!-- <img src="resources\images\plane-day.jpg" id="index-cover"> TODO: css style for cover -->
+                <h1 style="font-size: 48px; text-align: center;">Food Diary</h1>
+                <p style="font-size: 20px; text-align: center;">This is a diary of all the amazing food I've tried in my trips around Europe.</p>
+            </header>
+        </article>
+    </main>
+
+    <section>
+        <div id="introduction">
+            <h2 style="font-size: 32px;">Introduction</h2>
+            <p style="font-size: 24px; text-align: justify; text-indent: 50px;">
+                During the last 4 years I've been on many trips with my group of friends, visiting all sorts of cool places in Europe. On every trip, one of the most awaited experiences for me is to get to try the local food. So I decided to make this blog where I document
+                the culinary aspect of my trips. Enjoy!
+                <br>
+            </p>
+            <p>Press play for an audio experience!</p>
+            <audio controls>
+                <source src="resources/media/ratatouille.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+              </audio>
+        </div>
+    </section>
+
+    <br>
+    <hr>
+
+    <section>
+        <div id="sweden">
+            <h2 style="font-size: 32px;">Sweden</h2>
+            <p style="font-size: 24px; text-align: justify; text-indent: 50px;">
+                During our first day in Stockholm, Sweden we tried a local fusion restaurant called <b><a href="https://www.dirtytaco.se">Dirty Taco</a></b>. We had Asian-style tacos and appetizers. After that, we got our dessert from a local pastry shop
+                called <b><a href="https://brodsalt.se">Brod and Salt</a></b>. I enjoyed a delicious cardamom bun.
+                <br>
+            </p>
+            <div class="food-images">
+                <table>
+                    <tr>
+                        <td>
+                            <figure><img src="resources/images/tacos1.jpg" height="400" width="250">
+                                <figcaption>Tortilla Dip with Guacamole</figcaption>
+                            </figure>
+                        </td>
+                        <td>
+                            <figure><img src="resources/images/tacos2.jpg" height="400" width="250">
+                                <figcaption>Shrimp, Sweet chicken and Bahn Mi taco</figcaption>
+                            </figure>
+                        </td>
+                        <td>
+                            <figure><img src="resources/images/cardamombun.jpg" height="400" width="250">
+                                <figcaption>Cardamom bun and Caramel bun</figcaption>
+                            </figure>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <aside>
+                <div class="opinion">
+                    <p style="text-align: center;">
+                        My favourite dish was the Bahn Mi Taco!
+                    </p>
+                </div>
+            </aside>
+
+            <div class="recipe">
+                <svg width="400" height="90">
+                    <rect x="25" y="10" rx="10" ry="10" width="250" height="50" style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
+                    <text fill="#ffffff" font-size="20" font-family="Verdana" x="35" y="43">Cardamom Bun Recipe</text>
+                </svg>
+                <table>
+                    <tr>
+                        <td style="padding: 20px;">
+                            <h4 style="font-size: 20px;">Ingredients</h4>
+                            For the dough:
+                            <ul>
+                                <li>½ cup milk</li>
+                                <li>1 teaspoon fast acting yeast</li>
+                                <li>2 tablespoon unsalted butter softened</li>
+                                <li>2 tablespoon light brown sugar</li>
+                                <li>½ teaspoon ground cardamom</li>
+                                <li>1 ½ cups all purpose flour plain flour</li>
+                                <li>⅛ teaspoon salt</li>
+                            </ul>
+                            For the filling:
+                            <ul>
+                                <li>3 tablespoon unsalted butter</li>
+                                <li>3 tablespoon light brown sugar</li>
+                                <li>1 teaspoon ground cardamom</li>
+                            </ul>
+                        </td>
+                        <td style="padding: 20px;">
+                            <video width="320" height="240" controls>
+                        <source src="resources/media/cardamom-buns.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                        </video>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p style="text-align: center;">Thank you for coming along with me on my journey!</p>
+    </footer>
+</body>
+
+</html>
