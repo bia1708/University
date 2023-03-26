@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DATABASE</ID>
+  <OriginalElement>d2d09259-ae72-47fc-988d-2fe0d8cb5670</OriginalElement>
+  <nodes>
+    <node x="803.3541666666667" y="287.0">d2d09259-ae72-47fc-988d-2fe0d8cb5670.TABLE:main.auth_group</node>
+    <node x="910.5" y="851.0">d2d09259-ae72-47fc-988d-2fe0d8cb5670.TABLE:main.django_session</node>
+    <node x="464.5" y="851.0">d2d09259-ae72-47fc-988d-2fe0d8cb5670.TABLE:main.sqlite_master</node>
+    <node x="205.5" y="851.0">d2d09259-ae72-47fc-988d-2fe0d8cb5670.TABLE:main.movies_director</node>
+    <node x="259.22916666666663" y="0.0">d2d09259-ae72-47fc-988d-2fe0d8cb5670.TABLE:main.django_content_type</node>
+    <node x="665.5" y="851.0">d2d09259-ae72-47fc-988d-2fe0d8cb5670.TABLE:main.django_migrations</node>
+    <node x="102.75" y="1343.0">d2d09259-ae72-47fc-988d-2fe0d8cb5670.TABLE:main.movies_actormovie</node>
+    <node x="0.0" y="1097.0">d2d09259-ae72-47fc-988d-2fe0d8cb5670.TABLE:main.movies_actor</node>
+    <node x="538.0" y="261.0">d2d09259-ae72-47fc-988d-2fe0d8cb5670.TABLE:main.auth_permission</node>
+    <node x="0.0" y="558.0">d2d09259-ae72-47fc-988d-2fe0d8cb5670.TABLE:main.django_admin_log</node>
+    <node x="539.0" y="623.0">d2d09259-ae72-47fc-988d-2fe0d8cb5670.TABLE:main.auth_user_groups</node>
+    <node x="750.0" y="623.0">d2d09259-ae72-47fc-988d-2fe0d8cb5670.TABLE:main.auth_group_permissions</node>
+    <node x="246.0" y="623.0">d2d09259-ae72-47fc-988d-2fe0d8cb5670.TABLE:main.auth_user_user_permissions</node>
+    <node x="1142.5" y="851.0">d2d09259-ae72-47fc-988d-2fe0d8cb5670.TABLE:main.sqlite_sequence</node>
+    <node x="282.5" y="170.0">d2d09259-ae72-47fc-988d-2fe0d8cb5670.TABLE:main.auth_user</node>
+    <node x="216.0" y="1097.0">d2d09259-ae72-47fc-988d-2fe0d8cb5670.TABLE:main.movies_movie</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="d2d09259-ae72-47fc-988d-2fe0d8cb5670.TABLE:main.auth_group_permissions" target="d2d09259-ae72-47fc-988d-2fe0d8cb5670.TABLE:main.auth_group" relationship="REFERENCES">
+      <point x="61.5" y="-59.0" />
+      <point x="934.5" y="517.0" />
+      <point x="882.3541666666667" y="517.0" />
+      <point x="0.0" y="46.0" />
+    </edge>
+    <edge source="d2d09259-ae72-47fc-988d-2fe0d8cb5670.TABLE:main.auth_group_permissions" target="d2d09259-ae72-47fc-988d-2fe0d8cb5670.TABLE:main.auth_permission" relationship="REFERENCES">
+      <point x="-61.5" y="-59.0" />
+      <point x="811.5" y="527.0" />
+      <point x="634.5" y="527.0" />
+      <point x="0.0" y="72.0" />
+    </edge>
+    <edge source="d2d09259-ae72-47fc-988d-2fe0d8cb5670.TABLE:main.movies_actormovie" target="d2d09259-ae72-47fc-988d-2fe0d8cb5670.TABLE:main.movies_movie" relationship="REFERENCES">
+      <point x="51.25" y="-85.0" />
+      <point x="256.5" y="1318.0" />
+      <point x="312.5" y="1318.0" />
+      <point x="0.0" y="98.0" />
+    </edge>
+    <edge source="d2d09259-ae72-47fc-988d-2fe0d8cb5670.TABLE:main.auth_permission" target="d2d09259-ae72-47fc-988d-2fe0d8cb5670.TABLE:main.django_content_type" relationship="REFERENCES">
+      <point x="0.0" y="-72.0" />
+      <point x="634.5" y="144.0" />
+      <point x="368.72916666666663" y="144.0" />
+      <point x="0.0" y="59.0" />
+    </edge>
+    <edge source="d2d09259-ae72-47fc-988d-2fe0d8cb5670.TABLE:main.auth_user_user_permissions" target="d2d09259-ae72-47fc-988d-2fe0d8cb5670.TABLE:main.auth_user" relationship="REFERENCES">
+      <point x="-68.25" y="-59.0" />
+      <point x="314.25" y="537.0" />
+      <point x="377.5" y="537.0" />
+      <point x="0.0" y="163.0" />
+    </edge>
+    <edge source="d2d09259-ae72-47fc-988d-2fe0d8cb5670.TABLE:main.auth_user_groups" target="d2d09259-ae72-47fc-988d-2fe0d8cb5670.TABLE:main.auth_user" relationship="REFERENCES">
+      <point x="-47.75" y="-59.0" />
+      <point x="586.75" y="537.0" />
+      <point x="377.5" y="537.0" />
+      <point x="0.0" y="163.0" />
+    </edge>
+    <edge source="d2d09259-ae72-47fc-988d-2fe0d8cb5670.TABLE:main.auth_user_user_permissions" target="d2d09259-ae72-47fc-988d-2fe0d8cb5670.TABLE:main.auth_permission" relationship="REFERENCES">
+      <point x="68.25" y="-59.0" />
+      <point x="450.75" y="527.0" />
+      <point x="634.5" y="527.0" />
+      <point x="0.0" y="72.0" />
+    </edge>
+    <edge source="d2d09259-ae72-47fc-988d-2fe0d8cb5670.TABLE:main.movies_movie" target="d2d09259-ae72-47fc-988d-2fe0d8cb5670.TABLE:main.movies_director" relationship="REFERENCES">
+      <point x="0.0" y="-98.0" />
+      <point x="0.0" y="98.0" />
+    </edge>
+    <edge source="d2d09259-ae72-47fc-988d-2fe0d8cb5670.TABLE:main.django_admin_log" target="d2d09259-ae72-47fc-988d-2fe0d8cb5670.TABLE:main.django_content_type" relationship="REFERENCES">
+      <point x="-56.5" y="-124.0" />
+      <point x="56.5" y="537.0" />
+      <point x="112.35416666666669" y="537.0" />
+      <point x="112.35416666666669" y="144.0" />
+      <point x="368.72916666666663" y="144.0" />
+      <point x="0.0" y="59.0" />
+    </edge>
+    <edge source="d2d09259-ae72-47fc-988d-2fe0d8cb5670.TABLE:main.movies_actormovie" target="d2d09259-ae72-47fc-988d-2fe0d8cb5670.TABLE:main.movies_actor" relationship="REFERENCES">
+      <point x="-51.25" y="-85.0" />
+      <point x="154.0" y="1318.0" />
+      <point x="98.0" y="1318.0" />
+      <point x="0.0" y="98.0" />
+    </edge>
+    <edge source="d2d09259-ae72-47fc-988d-2fe0d8cb5670.TABLE:main.django_admin_log" target="d2d09259-ae72-47fc-988d-2fe0d8cb5670.TABLE:main.auth_user" relationship="REFERENCES">
+      <point x="56.5" y="-124.0" />
+      <point x="169.5" y="537.0" />
+      <point x="377.5" y="537.0" />
+      <point x="0.0" y="163.0" />
+    </edge>
+    <edge source="d2d09259-ae72-47fc-988d-2fe0d8cb5670.TABLE:main.auth_user_groups" target="d2d09259-ae72-47fc-988d-2fe0d8cb5670.TABLE:main.auth_group" relationship="REFERENCES">
+      <point x="47.75" y="-59.0" />
+      <point x="682.25" y="517.0" />
+      <point x="882.3541666666667" y="517.0" />
+      <point x="0.0" y="46.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.41226353555120676" showDependencies="false" x="1274.397943037975" y="756.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Columns</Category>
+    <Category>Comments</Category>
+    <Category>Key columns</Category>
+    <Category>Virtual foreign keys</Category>
+  </Categories>
+</Diagram>
+
