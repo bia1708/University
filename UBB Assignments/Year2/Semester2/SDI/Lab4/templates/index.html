@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+{% if movies_list %}
+    <ul>
+    {% for movie in movies_list %}
+        <li><a href="/movies/{{ movie.id }}/">{{ movie.movie_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No movies are available.</p>
+{% endif %}
+</body>
+</html>
