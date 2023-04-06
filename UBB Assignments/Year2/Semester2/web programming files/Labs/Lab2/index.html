@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+
+    <link href="style/general_style.css" rel="stylesheet">
+
+    <title>Food Diary</title>
+</head>
+
+<body>
+    <div class="menu">
+        <button class="menu__dropbtn">Menu</button>
+        <ul class="menu__content">
+            <li class="menu__li">
+                <a href="index.html">Home</a>
+                <ul class="side-menu__content">
+                    <li><a href="index.html">Introduction</a></li>
+                    <li><a href="index.html#sweden">Sweden</a></li>
+                    <li><a href="index.html#greece">Greece</a></li>
+                    <li><a href="index.html#spain">Spain</a></li>
+                    <li><a href="index.html#italy">Italy</a></li>
+                </ul>
+            </li>
+            <li class="menu__li">
+                <a href="recipes.html">Recipes</a>
+                <ul class="side-menu__content">
+                    <li><a href="https://www.carolinescooking.com/swedish-cardamom-buns/">Cardamom Bun</a></li>
+                    <li><a href="https://www.recipetineats.com/swedish-meatballs/">Swedish Meatballs</a></li>
+                    <li><a href="https://www.bbcgoodfood.com/recipes/greek-bouyiourdi">Bouyiourdi</a></li>
+                    <li><a href="https://www.themediterraneandish.com/tzatziki-sauce-recipe/">Tzatziki</a></li>
+                    <li><a href="https://www.bbcgoodfood.com/recipes/easy-paella">Paella</a></li>
+                </ul>
+            </li>
+            <li class="menu__li">
+                <a href="gallery.html">Gallery</a>
+                <ul class="side-menu__content">
+                    <li><a href="gallery.html#friends">Friends</a></li>
+                    <li><a href="https://unsplash.com/s/photos/sweden">Sweden</a></li>
+                    <li><a href="https://unsplash.com/s/photos/greece">Greece</a></li>
+                    <li><a href="https://unsplash.com/s/photos/spain">Spain</a></li>
+                    <li><a href="https://unsplash.com/s/photos/italy">Italy</a></li>
+                </ul>
+            </li>
+            <li class="menu__li">
+                <a href="https://www.canada.ca/en/health-canada/services/food-nutrition/food-safety/food-allergies-intolerances/food-allergies.html">Allergens</a>
+                <ul class="side-menu__content">
+                    <li><a>1</a></li>
+                    <li><a>2</a></li>
+                    <li><a>3</a></li>
+                    <li><a>4</a></li>
+                    <li><a>5</a></li>
+                </ul>
+            </li>
+            <li class="menu__li">
+                <a href="https://github.com/bia1708">My other projects</a>
+                <ul class="side-menu__content">
+                    <li><a>6</a></li>
+                    <li><a>7</a></li>
+                    <li><a>8</a></li>
+                    <li><a>9</a></li>
+                    <li><a>10</a></li>
+                </ul>
+            </li>
+            <!-- <li class="menu__li"><a href="https://www.canada.ca/en/health-canada/services/food-nutrition/food-safety/food-allergies-intolerances/food-allergies.html">Allergens</a></li> -->
+            <!-- <li class="menu__li"><a href="https://github.com/bia1708">My other projects</a></li> -->
+        </ul>
+    </div>
+
+    <main>
+        <article class="titlepage">
+            <header>
+                <!-- <img src="resources\images\plane-day.jpg" id="index-cover"> TODO: css style for cover -->
+                <h1 style="font-size: 48px; text-align: center;">Food Diary</h1>
+                <p style="font-size: 20px; text-align: center;">This is a diary of all the amazing food I've tried in my trips around Europe.</p>
+            </header>
+        </article>
+    </main>
+
+    <section>
+        <div id="introduction">
+            <h2 style="font-size: 32px;">Introduction</h2>
+            <p style="font-size: 24px; text-align: justify; text-indent: 50px;">
+                During the last 4 years I've been on many trips with my group of friends, visiting all sorts of cool places in Europe. On every trip, one of the most awaited experiences for me is to get to try the local food. So I decided to make this blog where I document
+                the culinary aspect of my trips. Enjoy!
+                <br>
+            </p>
+            <p>Press play for an audio experience!</p>
+            <audio controls>
+                <source src="resources/media/ratatouille.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+              </audio>
+        </div>
+    </section>
+
+    <br>
+    <hr>
+
+    <section>
+        <div id="sweden">
+            <h2 style="font-size: 32px;">Sweden</h2>
+            <p style="font-size: 24px; text-align: justify; text-indent: 50px;">
+                During our first day in Stockholm, Sweden we tried a local fusion restaurant called <b><a href="https://www.dirtytaco.se">Dirty Taco</a></b>. We had Asian-style tacos and appetizers. After that, we got our dessert from a local pastry shop
+                called <b><a href="https://brodsalt.se">Brod and Salt</a></b>. I enjoyed a delicious cardamom bun.
+                <br>
+            </p>
+            <div class="food-images">
+                <table>
+                    <tr>
+                        <td>
+                            <figure><img src="resources/images/tacos1.jpg" height="400" width="250">
+                                <figcaption>Tortilla Dip with Guacamole</figcaption>
+                            </figure>
+                        </td>
+                        <td>
+                            <figure><img src="resources/images/tacos2.jpg" height="400" width="250">
+                                <figcaption>Shrimp, Sweet chicken and Bahn Mi taco</figcaption>
+                            </figure>
+                        </td>
+                        <td>
+                            <figure><img src="resources/images/cardamombun.jpg" height="400" width="250">
+                                <figcaption>Cardamom bun and Caramel bun</figcaption>
+                            </figure>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <aside>
+                <div class="opinion">
+                    <p style="text-align: center;">
+                        My favourite dish was the Bahn Mi Taco!
+                    </p>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <footer>
+        <p style="text-align: center;">Thank you for coming along with me on my journey!</p>
+    </footer>
+</body>
+
+</html>

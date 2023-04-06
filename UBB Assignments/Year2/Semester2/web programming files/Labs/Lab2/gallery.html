@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+
+    <link href="style/general_style.css" rel="stylesheet">
+    <link href="style/gallery_style.css" rel="stylesheet">
+    <title>Gallery</title>
+</head>
+
+<body>
+    <div class="menu">
+        <button class="menu__dropbtn">Menu</button>
+        <ul class="menu__content">
+            <li class="menu__li">
+                <a href="index.html">Home</a>
+                <ul class="side-menu__content">
+                    <li><a href="index.html">Introduction</a></li>
+                    <li><a href="index.html#sweden">Sweden</a></li>
+                    <li><a href="index.html#greece">Greece</a></li>
+                    <li><a href="index.html#spain">Spain</a></li>
+                    <li><a href="index.html#italy">Italy</a></li>
+                </ul>
+            </li>
+            <li class="menu__li">
+                <a href="recipes.html">Recipes</a>
+                <ul class="side-menu__content">
+                    <li><a href="https://www.carolinescooking.com/swedish-cardamom-buns/">Cardamom Bun</a></li>
+                    <li><a href="https://www.recipetineats.com/swedish-meatballs/">Swedish Meatballs</a></li>
+                    <li><a href="https://www.bbcgoodfood.com/recipes/greek-bouyiourdi">Bouyiourdi</a></li>
+                    <li><a href="https://www.themediterraneandish.com/tzatziki-sauce-recipe/">Tzatziki</a></li>
+                    <li><a href="https://www.bbcgoodfood.com/recipes/easy-paella">Paella</a></li>
+                </ul>
+            </li>
+            <li class="menu__li">
+                <a href="gallery.html">Gallery</a>
+                <ul class="side-menu__content">
+                    <li><a href="gallery.html#friends">Friends</a></li>
+                    <li><a href="https://unsplash.com/s/photos/sweden">Sweden</a></li>
+                    <li><a href="https://unsplash.com/s/photos/greece">Greece</a></li>
+                    <li><a href="https://unsplash.com/s/photos/spain">Spain</a></li>
+                    <li><a href="https://unsplash.com/s/photos/italy">Italy</a></li>
+                </ul>
+            </li>
+            <li class="menu__li"><a href="https://www.canada.ca/en/health-canada/services/food-nutrition/food-safety/food-allergies-intolerances/food-allergies.html">Allergens</a></li>
+            <li class="menu__li"><a href="https://github.com/bia1708">My other projects</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <article class="titlepage">
+            <header>
+                <!-- <img src="resources\images\plane-day.jpg" id="index-cover"> TODO: css style for cover -->
+                <h1 style="font-size: 48px; text-align: center;">Gallery</h1>
+                <p style="font-size: 20px; text-align: center;">This is a gallery of pictures I took while traveling.</p>
+            </header>
+        </article>
+    </main>
+
+    <br>
+    <hr>
+
+    <section id="friends">
+        <h3 class="slideshow__title">Meet my companions!</h3>
+        <table class="slideshow">
+            <tr class="slideshow__row">
+                <td class="slideshow__column">
+                    <a href="https://www.instagram.com/carinachitu/"><img src="resources/images/carina.jpg" alt="Dom" class="column__image"></a>
+                    <div class="column__fill">
+                        <a href="https://www.instagram.com/carinachitu/">
+                            <div class="column__text">Carina Chitu <br><i>Age: 20</i></div>
+                        </a>
+                    </div>
+                </td>
+                <td class="slideshow__column">
+                    <a href="https://www.instagram.com/stefanliciu/"><img src="resources/images/liciu.jpg" alt="Arthur" class="column__image"></a>
+                    <div class="column__fill">
+                        <a href="https://www.instagram.com/stefanliciu/">
+                            <div class="column__text">Stefan Liciu <br><i>Age: 21</i></div>
+                        </a>
+                    </div>
+                </td>
+                <td class="slideshow__column">
+                    <a href="https://www.instagram.com/natalialupu_/"><img src="resources/images/natalia.jpg" alt="Ariadne" class="column__image"></a>
+                    <div class="column__fill">
+                        <a href="https://www.instagram.com/natalialupu_/">
+                            <div class="column__text">Natalia Lupu<br><i>Age: 21</i></div>
+                        </a>
+                    </div>
+                </td>
+                <td class="slideshow__column">
+                    <a href="https://www.instagram.com/_andreivisan_/"><img src="resources/images/vsn.jpg" alt="Eames" class="column__image"></a>
+                    <div class="column__fill">
+                        <a href="https://www.instagram.com/_andreivisan_/">
+                            <div class="column__text">Andrei Visan<br><i>Age: 20</i></div>
+                        </a>
+                    </div>
+                </td>
+                <td class="slideshow__column">
+                    <a href="https://www.instagram.com/olarasuruxandra/"><img src="resources/images/ruxi.jpg" alt="Saito" class="column__image"></a>
+                    <div class="column__fill">
+                        <a href="https://www.instagram.com/olarasuruxandra/">
+                            <div class="column__text">Ruxandra Olarasu<br><i>Age: 20</i></div>
+                        </a>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </section>
+</body>
+
+</html>

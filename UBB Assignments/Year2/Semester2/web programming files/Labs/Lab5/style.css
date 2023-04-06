@@ -1,0 +1,20 @@
+.nav {
+    height: 50px;
+    position: relative;
+    top: 40%;
+}
+
+.file-table {
+    width: 50%;
+    border: 2px solid black;
+    text-align: center;
+    padding: 5px;
+}
+
+.filtered-table {
+    position: relative;
+    top: 20%;
+    width: 20%;
+    text-align: center;
+    padding: 3px;
+}

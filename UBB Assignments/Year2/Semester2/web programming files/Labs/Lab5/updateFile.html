@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/style.css">
+
+    <title>Files</title>
+</head>
+
+<body>
+    <h1>Multimedia Collection</h1>
+
+    <h2>Update a file</h2>
+
+    <div>
+        <table id="titleList" class="file-table">
+        </table>
+    </div>
+    <br>
+
+    <form onsubmit="updateFile($('#titleInput').val(), $('#formatInput').val(), $('#pathInput').val(), $('#sizeInput').val()); return false;">
+        <label for="titleInput">File name:</label>
+        <input type="text" id="titleInput" required><br>
+
+        <label for="formatInput">Format:</label>
+        <input type="text" id="formatInput" required><br>
+
+        <label for="pathInput">Path:</label>
+        <input type="text" id="pathInput" required><br>
+
+        <label for="sizeInput">Size:</label>
+        <input type="number" id="sizeInput" required><br>
+
+        <input type="submit" value="Update File">
+    </form>
+
+    <br>
+    <div class="nav">
+        <h3>Navigation</h3>
+
+        <table>
+            <tr>
+                <td><a href="/allFiles.html">Browse all files</a></td>
+            </tr>
+            <tr>
+                <td><a href="/filterFiles.html">Browse files by category</a></td>
+            </tr>
+            <tr>
+                <td><a href="/addFile.html">Add a file</a></td>
+            </tr>
+            <tr>
+                <td><a href="/deleteFile.html">Delete a file</a></td>
+            </tr>
+            <tr>
+                <td><a href="/updateFile.html">Update a file</a></td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="multimedia.js"></script>
+</body>
+
+
+</html>
