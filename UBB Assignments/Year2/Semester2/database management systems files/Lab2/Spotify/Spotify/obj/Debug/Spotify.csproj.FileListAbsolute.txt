@@ -1,0 +1,11 @@
+C:\Users\PC\Documents\Facultate MegaFolder\An2\Semester2\DBMS2\Lab2\Spotify\Spotify\bin\Debug\Spotify.exe.config
+C:\Users\PC\Documents\Facultate MegaFolder\An2\Semester2\DBMS2\Lab2\Spotify\Spotify\bin\Debug\Spotify.exe
+C:\Users\PC\Documents\Facultate MegaFolder\An2\Semester2\DBMS2\Lab2\Spotify\Spotify\bin\Debug\Spotify.pdb
+C:\Users\PC\Documents\Facultate MegaFolder\An2\Semester2\DBMS2\Lab2\Spotify\Spotify\obj\Debug\Spotify.csproj.AssemblyReference.cache
+C:\Users\PC\Documents\Facultate MegaFolder\An2\Semester2\DBMS2\Lab2\Spotify\Spotify\obj\Debug\Spotify.csproj.SuggestedBindingRedirects.cache
+C:\Users\PC\Documents\Facultate MegaFolder\An2\Semester2\DBMS2\Lab2\Spotify\Spotify\obj\Debug\Spotify.Form1.resources
+C:\Users\PC\Documents\Facultate MegaFolder\An2\Semester2\DBMS2\Lab2\Spotify\Spotify\obj\Debug\Spotify.Properties.Resources.resources
+C:\Users\PC\Documents\Facultate MegaFolder\An2\Semester2\DBMS2\Lab2\Spotify\Spotify\obj\Debug\Spotify.csproj.GenerateResource.cache
+C:\Users\PC\Documents\Facultate MegaFolder\An2\Semester2\DBMS2\Lab2\Spotify\Spotify\obj\Debug\Spotify.csproj.CoreCompileInputs.cache
+C:\Users\PC\Documents\Facultate MegaFolder\An2\Semester2\DBMS2\Lab2\Spotify\Spotify\obj\Debug\Spotify.exe
+C:\Users\PC\Documents\Facultate MegaFolder\An2\Semester2\DBMS2\Lab2\Spotify\Spotify\obj\Debug\Spotify.pdb
