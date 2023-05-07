@@ -1,0 +1,31 @@
+<h1>Multimedia Manager</h1>
+
+<h2>Browse Titles by Category</h2>
+<select id="categoryDropdown" #filter (change)="filterTitles(filter.value)" class="dropdown">
+        <option value="">-- Select Category --</option>
+        <option value="images">Pictures</option>
+        <option value="videos">Videos</option>
+        <option value="audio">Audio</option>
+</select>
+<br><br>
+
+<table>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Format</th>
+            <th>Path</th>
+            <th>Size(KB)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let file of files">
+            <td>{{file.fid}}</td>
+            <td>{{file.title}}</td>
+            <td>{{file.file_format}}</td>
+            <td>{{file.path}}</td>
+            <td>{{file.size}}</td>
+        </tr>
+    </tbody>
+</table>

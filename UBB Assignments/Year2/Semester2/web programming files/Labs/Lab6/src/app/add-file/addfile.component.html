@@ -1,0 +1,19 @@
+<h1>Multimedia Collection</h1>
+
+<h2>Add a file</h2>
+
+<form [formGroup]="addForm" (ngSubmit)="addFile()">
+    <label for="titleInput">File name:</label>
+    <input type="text" id="titleInput" formControlName="title" required><br>
+
+    <label for="formatInput">Format:</label>
+    <input type="text" id="formatInput" formControlName="file_format" required><br>
+
+    <label for="pathInput">Path:</label>
+    <input type="text" id="pathInput" formControlName="path" required><br>
+
+    <label for="sizeInput">Size:</label>
+    <input type="number" id="sizeInput" formControlName="size" required><br>
+
+    <input type="submit" value="Add File">
+</form>

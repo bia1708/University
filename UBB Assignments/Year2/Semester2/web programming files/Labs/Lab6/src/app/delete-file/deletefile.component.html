@@ -1,0 +1,11 @@
+<h1>Multimedia Collection</h1>
+
+<h2>Remove a file</h2>
+
+
+<form [formGroup]="deleteForm" (ngSubmit)="deleteFile()">
+    <label for="titleInput">File name:</label>
+    <input type="text" id="titleInput" formControlName="title" required><br>
+
+    <input type="submit" value="Remove File">
+</form>
