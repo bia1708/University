@@ -1,0 +1,17 @@
+// p1err -- p1 with two errors
+
+num a1.
+num _a2. // _a2 is not a valid identifier
+num 3a.  // 3a is not a valid identifier
+
+a1 = read().
+a2 = read().
+a3 = read().
+
+if [ a1 > a2 && a1 > a3 ] {
+	ret a1.
+} elif [ a2 > a1 && a2 > a3 ] {
+	ret a2.
+} else {
+	ret a3.
+}
