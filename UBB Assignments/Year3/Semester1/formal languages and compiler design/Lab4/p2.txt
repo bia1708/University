@@ -1,0 +1,19 @@
+// p2 -- verify a number is prime
+
+num a1.
+
+a1 = read().
+
+if [ a1 == 1 ] {
+	ret 0.
+} elif [ a1 == 2 ] {
+	ret 1.
+} elif [ a1 % 2 == 0 ] {
+	ret 0.
+} else {
+	for [ num d = 3. d < a1 / 2. d = d + 1. ] {
+		if [ a1 % d == 0 ] {
+			ret 0.
+		}
+	ret 1.
+}

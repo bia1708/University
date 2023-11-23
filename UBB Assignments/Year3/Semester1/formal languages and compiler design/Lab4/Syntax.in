@@ -1,0 +1,20 @@
+program = declaration stmtlist
+vartype = "num" | "str" | "char"
+vardecl = vartype IDENTIFIER "."
+arrdecl = vartype "[" "]" IDENTIFIER "."
+declaration = vardecl | arrdecl
+forstmt = "for" "[" stmtlist "]" "}"
+stmtlist = stmt | stmt "." stmtlist
+stmt = simplstmt | structstmt
+simplstmt = assignment | iostmt
+assignment = IDENTIFIER "=" expression "."
+expression = expression "+" term | term
+term = term "*" factor | factor
+factor = "(" expression ")" | IDENTIFIER
+iostmt = "read()" "." | "write()" "."
+structstmt = forstmt | ifstmt | whilestmt 
+ifstmt = "if" "[" condition "]" "{" stmtlist "}" [ "elif" "[" condition "]" "{" stmtlist "}" ] [ "else" "{" stmtlist "}" ]
+whilestmt = "while" "[" cmpdcondition "]" "{" stmtlist "}"
+cmpdcondition = condition | condition [ "&&" | "||" ] cmpdcondition
+condition = expression RELATION expression
+RELATION = "<" | "<=" | "==" | "!=" | ">=" | ">"
