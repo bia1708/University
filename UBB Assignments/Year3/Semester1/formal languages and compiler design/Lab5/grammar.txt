@@ -1,0 +1,187 @@
+program composed_stmt statement declaration assign_stmt io_stmt if_stmt for_stmt while_stmt return_stmt type seq_identifiers identifier array start_identifier letters no_0_u_int_const no_0_digits seq_digits digits seq_identifier seq_letters seq_underline expression expression_int expression_string int_const array_index operation u_int_const signs string_const seq_characters characters read_stmt write_stmt seq_write seq_expression condition elif_stmt relation logic_op compound_condition
+epsilon ; num str , _ [ ] ( ) { } 0 1 2 3 4 5 6 7 8 9 a b c d e f g h i j k l m n o p q r s t u v w x y z A B C D E F G H I J K L M N O P Q R S T U V W X Y Z = + - / * % " . ? ! ' @ # $ ^ & && || ` ~ read() write if elif else > < <= >= == for while ret
+program -> composed_stmt
+program -> epsilon
+composed_stmt -> statement
+composed_stmt -> statement composed_stmt
+statement -> declaration
+statement -> assign_stmt
+statement -> io_stmt
+statement -> if_stmt
+statement -> for_stmt
+statement -> while_stmt
+statement -> return_stmt
+declaration -> type seq_identifiers .
+type -> num
+type -> str
+seq_identifiers -> identifier
+seq_identifiers -> array
+seq_identifiers -> identifier , seq_identifiers
+seq_identifiers -> array , seq_identifiers
+identifier -> start_identifier
+identifier -> start_identifier seq_identifier
+start_identifier -> letters
+start_identifier -> _
+array -> identifier [ no_0_u_int_const ]
+no_0_u_int_const -> no_0_digits
+no_0_u_int_const -> no_0_digits seq_digits
+no_0_digits -> 1
+no_0_digits -> 2
+no_0_digits -> 3
+no_0_digits -> 4
+no_0_digits -> 5
+no_0_digits -> 6
+no_0_digits -> 7
+no_0_digits -> 8
+no_0_digits -> 9
+seq_digits -> digits
+seq_digits -> digits seq_digits
+digits -> 0
+digits -> no_0_digits
+letters -> a
+letters -> b
+letters -> c
+letters -> d
+letters -> e
+letters -> f
+letters -> g
+letters -> h
+letters -> i
+letters -> j
+letters -> k
+letters -> l
+letters -> m
+letters -> n
+letters -> o
+letters -> p
+letters -> q
+letters -> r
+letters -> s
+letters -> t
+letters -> u
+letters -> v
+letters -> w
+letters -> x
+letters -> y
+letters -> z
+letters -> A
+letters -> B
+letters -> C
+letters -> D
+letters -> E
+letters -> F
+letters -> G
+letters -> H
+letters -> I
+letters -> J
+letters -> K
+letters -> L
+letters -> M
+letters -> N
+letters -> O
+letters -> P
+letters -> Q
+letters -> R
+letters -> S
+letters -> T
+letters -> U
+letters -> V
+letters -> W
+letters -> X
+letters -> Y
+letters -> Z
+seq_identifier -> seq_digits
+seq_identifier -> seq_letters
+seq_identifier -> seq_underline
+seq_identifier -> seq_digits seq_identifier
+seq_identifier -> seq_letters seq_identifier
+seq_identifier -> seq_underline seq_identifier
+seq_digits -> digits
+seq_digits -> digits seq_digits
+seq_letters -> letters
+seq_letters -> letters seq_letters
+seq_underline -> _
+seq_underline -> _ seq_underline
+assign_stmt -> identifier = expression .
+expression -> expression_int
+expression -> expression_string
+expression_int -> int_const
+expression_int -> array_index
+expression_int -> int_const operation expression_int
+expression_int -> array_index operation expression_int
+int_const -> u_int_const
+int_const -> signs no_0_digits
+int_const -> signs u_int_const
+u_int_const -> digits
+u_int_const -> no_0_digits seq_digits
+signs -> +
+signs -> -
+array_index -> identifier [ u_int_const ]
+operation -> +
+operation -> -
+operation -> /
+operation -> *
+operation -> %
+expression_string -> string_const
+expression_string -> string_const + expression_string
+string_const -> " seq_characters "
+string_const -> " "
+seq_characters -> characters
+seq_characters -> characters seq_characters
+characters -> letters
+characters -> digits
+characters -> ,
+characters -> .
+characters -> ?
+characters -> !
+characters -> _
+characters -> '
+characters -> -
+characters -> +
+characters -> /
+characters -> *
+characters -> ;
+characters -> (
+characters -> )
+characters -> {
+characters -> }
+characters -> [
+characters -> ]
+characters -> @
+characters -> #
+characters -> $
+characters -> %
+characters -> ^
+characters -> &
+characters -> `
+characters -> ~
+io_stmt -> read_stmt
+io_stmt -> write_stmt
+read_stmt -> read() .
+seq_write -> identifier
+seq_write -> array_index
+seq_write -> identifier , seq_write
+seq_write -> array_index , seq_write
+write_stmt -> write ( seq_write ) .
+seq_write -> seq_expression
+seq_expression -> expression
+seq_expression -> expression seq_expression
+if_stmt -> if [ compound_condition ] { composed_stmt }
+if_stmt -> if [ compound_condition ] { composed_stmt } elif_stmt
+if_stmt -> if [ compound_condition ] { composed_stmt } else { composed_stmt }
+if_stmt -> if [ compound_condition ] { composed_stmt } elif_stmt else { composed_stmt }
+condition -> expression relation expression
+compound_condition -> condition logic_op condition
+compound_condition -> condition
+relation -> >
+relation -> <
+relation -> ==
+relation -> >=
+relation -> <=
+logic_op -> &&
+logic_op -> ||
+elif_stmt -> elif [ compound_condition ] { composed_stmt }
+elif_stmt -> elif [ compound_condition ] { composed_stmt } elif_stmt
+for_stmt -> for [ identifier = expression_int . identifier relation expression_int . identifier = expression_int ] { composed_stmt }
+while_stmt -> while [ compound_condition ] { composed_stmt }
+return_stmt -> ret int_const .
