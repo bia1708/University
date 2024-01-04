@@ -1,0 +1,18 @@
+PROGRAM {
+// p3 -- gcd of two numbers
+
+num a1.
+num a2.
+
+a1 = read().
+a2 = read().
+
+while [ a != b ] {
+	if [ a > b ] {
+		a = a - b.
+	} else {
+		b = b - a.
+	}
+	ret a.
+}
+}

@@ -1,0 +1,7 @@
+PROGRAM {
+num a = 10.
+while [ a == 1 ] {
+x = 1.
+}
+ret 9.
+}

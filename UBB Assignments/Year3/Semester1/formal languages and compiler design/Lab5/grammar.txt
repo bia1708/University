@@ -1,7 +1,6 @@
 program composed_stmt statement declaration assign_stmt io_stmt if_stmt for_stmt while_stmt return_stmt type seq_identifiers identifier array start_identifier letters no_0_u_int_const no_0_digits seq_digits digits seq_identifier seq_letters seq_underline expression expression_int expression_string int_const array_index operation u_int_const signs string_const seq_characters characters read_stmt write_stmt seq_write seq_expression condition elif_stmt relation logic_op compound_condition
-epsilon ; num str , _ [ ] ( ) { } 0 1 2 3 4 5 6 7 8 9 a b c d e f g h i j k l m n o p q r s t u v w x y z A B C D E F G H I J K L M N O P Q R S T U V W X Y Z = + - / * % " . ? ! ' @ # $ ^ & && || ` ~ read() write if elif else > < <= >= == for while ret
-program -> composed_stmt
-program -> epsilon
+epsilon ; num str , _ [ ] ( ) { } 0 1 2 3 4 5 6 7 8 9 a b c d e f g h i j k l m n o p q r s t u v w x y z A B C D E F G H I J K L M N O P Q R S T U V W X Y Z = + - / * % " . ? ! ' @ # $ ^ & && || ` ~ read() write if elif else > < <= >= == != for while ret PROGRAM ID CONST
+program -> PROGRAM { composed_stmt }
 composed_stmt -> statement
 composed_stmt -> statement composed_stmt
 statement -> declaration
@@ -14,15 +13,17 @@ statement -> return_stmt
 declaration -> type seq_identifiers .
 type -> num
 type -> str
-seq_identifiers -> identifier
+seq_identifiers -> ID
+seq_identifiers -> ID = CONST
 seq_identifiers -> array
-seq_identifiers -> identifier , seq_identifiers
+seq_identifiers -> ID , seq_identifiers
+seq_identifiers -> ID = CONST , seq_identifiers
 seq_identifiers -> array , seq_identifiers
 identifier -> start_identifier
 identifier -> start_identifier seq_identifier
 start_identifier -> letters
 start_identifier -> _
-array -> identifier [ no_0_u_int_const ]
+array -> ID [ no_0_u_int_const ]
 no_0_u_int_const -> no_0_digits
 no_0_u_int_const -> no_0_digits seq_digits
 no_0_digits -> 1
@@ -102,9 +103,16 @@ seq_letters -> letters
 seq_letters -> letters seq_letters
 seq_underline -> _
 seq_underline -> _ seq_underline
-assign_stmt -> identifier = expression .
+assign_stmt -> ID = expression .
+expression -> CONST
+expression -> ID
+expression -> io_stmt
 expression -> expression_int
 expression -> expression_string
+expression -> ID operation ID
+expression -> ID operation CONST
+expression -> CONST operation ID
+expression -> CONST operation CONST
 expression_int -> int_const
 expression_int -> array_index
 expression_int -> int_const operation expression_int
@@ -116,7 +124,7 @@ u_int_const -> digits
 u_int_const -> no_0_digits seq_digits
 signs -> +
 signs -> -
-array_index -> identifier [ u_int_const ]
+array_index -> ID [ u_int_const ]
 operation -> +
 operation -> -
 operation -> /
@@ -157,7 +165,7 @@ characters -> `
 characters -> ~
 io_stmt -> read_stmt
 io_stmt -> write_stmt
-read_stmt -> read() .
+read_stmt -> read()
 seq_write -> identifier
 seq_write -> array_index
 seq_write -> identifier , seq_write
@@ -176,12 +184,16 @@ compound_condition -> condition
 relation -> >
 relation -> <
 relation -> ==
+relation -> !=
 relation -> >=
 relation -> <=
 logic_op -> &&
 logic_op -> ||
 elif_stmt -> elif [ compound_condition ] { composed_stmt }
 elif_stmt -> elif [ compound_condition ] { composed_stmt } elif_stmt
-for_stmt -> for [ identifier = expression_int . identifier relation expression_int . identifier = expression_int ] { composed_stmt }
+for_stmt -> for [ ID = CONST . compound_condition . ID = expression ] { composed_stmt }
+for_stmt -> for [ ID = CONST . compound_condition . ID = expression ] { composed_stmt }
+for_stmt -> for [ declaration compound_condition . ID = expression ] { composed_stmt }
 while_stmt -> while [ compound_condition ] { composed_stmt }
-return_stmt -> ret int_const .
+return_stmt -> ret CONST .
+return_stmt -> ret ID .

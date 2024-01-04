@@ -12,6 +12,19 @@ class Grammar:
             else:
                 self.__productions[elements[0].strip()] = [elements[1].strip().split(" ")]
 
+    def get_start_symbol(self):
+        return self.__non_terminals[0]
+
+    def get_productions_for_non_terminal(self, non_terminal: str):
+        if non_terminal in self.__non_terminals:
+            return [production for production in self.__productions[non_terminal]]
+
+    def get_non_terminals(self):
+        return self.__non_terminals
+
+    def get_terminals(self):
+        return self.__terminals
+
     def print_non_terminals(self):
         print(*self.__non_terminals)
 

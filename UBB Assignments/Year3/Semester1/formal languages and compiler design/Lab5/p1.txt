@@ -1,0 +1,19 @@
+PROGRAM {
+// p1 - Max of three numbers
+
+num a1.
+num a2.
+num a3.
+
+a1 = read().
+a2 = read().
+a3 = read().
+
+if [ a1 > a2 && a1 > a3 ] {
+    ret a1.
+} elif [ a2 > a1 && a2 > a3 ] {
+    ret a2.
+} else {
+    ret a3.
+}
+}
